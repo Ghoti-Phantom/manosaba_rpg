@@ -1,4 +1,4 @@
-# manosaba_rpg_repo
+# 《魔法少女的魔女灾厄》RPG制作仓库
 
 #### 介绍
 manosaba_rpg制作仓库
