@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://85ldtbk3yaap"]
+
+[ext_resource type="PackedScene" uid="uid://unk0ier5eenk" path="res://assets/Obj2D/Charactors/emmatest.glb" id="1_g6gv7"]
+[ext_resource type="Texture2D" uid="uid://cg64hcumu87be" path="res://assets/Art1/CharactorSprites/_emma_up.png" id="2_l1eae"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a6wys"]
+resource_name = "材质.006"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_l1eae")
+roughness = 0.5
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4e83o"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "材质.006",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_r3pub"]
+resource_name = "emmatest_平面_009"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_a6wys"),
+"name": "材质.006",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4e83o")
+
+[node name="emmatest" instance=ExtResource("1_g6gv7")]
+
+[node name="Emma" parent="." index="0"]
+mesh = SubResource("ArrayMesh_r3pub")

@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://w5ipx7libxei"]
+
+[ext_resource type="PackedScene" uid="uid://dncd8y81nlsvl" path="res://assets/Obj2D/lanternFside.glb" id="1_7duh7"]
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://assets/Art2/walitu/tiledassest.tres" id="2_nn65d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t8g3n"]
+resource_name = "材质.003"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_nn65d")
+roughness = 0.5
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_g3n41"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "材质.003",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qcv0h"]
+resource_name = "lanternFside_平面_004"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray(55, 205, 150, 204, 88, 230, 58, 154, 88, 230, 150, 204, 55, 205, 58, 154),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_t8g3n"),
+"name": "材质.003",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_g3n41")
+
+[node name="lanternFside2" instance=ExtResource("1_7duh7")]
+
+[node name="lanternFside" parent="." index="0"]
+mesh = SubResource("ArrayMesh_qcv0h")

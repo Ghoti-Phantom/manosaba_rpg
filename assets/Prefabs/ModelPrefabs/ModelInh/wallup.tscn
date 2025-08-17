@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=4 uid="uid://b2qeumxjx2lgr"]
+
+[ext_resource type="PackedScene" uid="uid://cebigfkyskfo" path="res://assets/Obj3D/wallup.glb" id="1_ecjfm"]
+[ext_resource type="Texture2D" uid="uid://v6ivnkht8r7w" path="res://assets/Art2/walitu/walitu1.png" id="2_vg7be"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mujsx"]
+resource_name = "材质"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_vg7be")
+roughness = 0.5
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_v0gs2"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "材质",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6dif1"]
+resource_name = "wallup_立方体_002"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("kLMtmbHM0WaxzC2ZkLPRZpCzLZmxzNFmscwtmZCz0WaQsy2ZsczRZrHMLZmQs9FmCrNcMumZAAAKswAA6ZlcMpCzLZmxzNFmscwtmZCz0WaQsy2ZsczRZrHMLZmQs9Fm"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_mujsx"),
+"name": "材质",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP//AIAAAP////8AgP///////wCAAAAAAP//AIAAAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/3////9/////f////3///wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_v0gs2")
+
+[node name="wallup" instance=ExtResource("1_ecjfm")]
+
+[node name="WallUp" parent="." index="0"]
+mesh = SubResource("ArrayMesh_6dif1")

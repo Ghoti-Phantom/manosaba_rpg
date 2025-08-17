@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=4 uid="uid://dob4sjbsan1ld"]
+
+[ext_resource type="PackedScene" uid="uid://catdlxh1uel6w" path="res://assets/Obj3D/floor2.glb" id="1_dcdbb"]
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://assets/Art2/walitu/tiledassest.tres" id="2_bgyuf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgyuf"]
+resource_name = "材质"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_bgyuf")
+roughness = 0.5
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_r6any"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "材质",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sxxw8"]
+resource_name = "floor2_立方体_005"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("kLMtmbHM0WaxzC2ZkLPRZpCzLZmxzNFmscwtmZCz0WaQsy2ZsczRZrHMLZmQs9FmkLMtmbHM0WaxzC2ZkLPRZpCzLZmxzNFmscwtmZCz0WZNM5bMbkw6mm5MlsxNMzqa"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_bgyuf"),
+"name": "材质",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAAD/v///AAD///+///8AAAAA/78AAAAA////v/////8AAP//AAD///////8AAP//AAD/////////////VNVU1VTVVNVU1VTVVNVU1f+//7//v/+//7//v/+//7+qKqoqqiqqKqoqqiqqKqoq/////////////////////wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_r6any")
+
+[node name="floor2" instance=ExtResource("1_dcdbb")]
+
+[node name="FloorCube2" parent="." index="0"]
+mesh = SubResource("ArrayMesh_sxxw8")

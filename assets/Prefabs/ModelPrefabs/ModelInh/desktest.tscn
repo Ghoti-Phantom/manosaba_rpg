@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=4 uid="uid://cbwmy3bs5f1iq"]
+
+[ext_resource type="PackedScene" uid="uid://ncndd6d72gj5" path="res://assets/Obj3D/desktest.glb" id="1_v5ewl"]
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://assets/Art2/walitu/tiledassest.tres" id="2_nk6jt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kuaqe"]
+resource_name = "材质.001"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_nk6jt")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qcg5x"]
+_surfaces = [{
+"aabb": AABB(-3, -1, -1, 6, 1, 2),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAIAAQACAAGAAQABwAFAAkACQAFAAYABwAKAAgABwAJAAoACAALAAYACQAGAAsADAALAAgACgAMAAgADQAJAAsACgAJAA0ADAAOAAsADQALAA4ACgAPAAwACgANAA8ADwAOAAwADwANAA4A"),
+"name": "材质.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAABVVf//AAAAAFVVAAD//wAAVVX/////AABVVQAAAAAAAKqq//8AAAAAqqoAAP//AACqqgAAAAAAAKqq/////wAA/////wAAAAD//wAA//8AAP///////wAA//8AAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qfas3"]
+resource_name = "desktest_立方体_006"
+_surfaces = [{
+"aabb": AABB(-3, -1, -1, 6, 1, 2),
+"attribute_data": PackedByteArray("Ign/f2EbSJIiCUiSYRv/f79pXDKMe5Ihv2mSIYx7XDJhG0sSIgkCAGEbAgAiCUsS3EpcMok4kiHcSpIhiThcMqHhnqLVz/J+oeHyftXPnqLQSYYgKDslA9BJJQMoO4Yg7niGIEVqJQPueCUDRWqGINlghiAwUiUD2WAlAzBShiC645Kh7dHmfbrj5n3t0ZKhuuO4pO3RDIG64wyB7dG4pIx7XDK/aZIhjHuSIb9pXDJ3Y1wyJFGSIXdjkiEkUVwyiThcMlZKkiGJOJIhVkpcMvFiXDIkUZIh8WKSISRRXDI="),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUA"),
+"material": SubResource("StandardMaterial3D_kuaqe"),
+"name": "材质.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 56,
+"vertex_data": PackedByteArray("AAAAAP////8AAP//AAD//wAA////////AAAAAAAA//+qqgAAAAAAAP////8AAAAAqqr//wAAAAD//wAAAAAAAP//AAAAAP+//////////7//////AAD/v///AAD///+/VVUAAP//AIAAAP////8AgFVV/////wCAAAAAAP//AICqqgAAAABU1f//AAD//1TV//8AAAAAVNWqqgAA//9U1VVV//8AAFTVAAD/////VNUAAP//AABU1VVV/////1TV/////wAAVNWqqv////9U1aqq//8AAFTV////////VNWqqv//AABU1VVV/////1TVVVX//wAAVNWqqv////9U1QAAAAAAAFTVVVUAAP//VNVVVQAAAABU1QAAAAD//1TVVVUAAAAAVNWqqgAA//9U1aqqAAAAAFTVVVUAAP//VNX//wAA//8AgKqq/////wCA////////AICqqgAA//8AgKqqAAD//wCAVVX/////AICqqv////8AgFVVAAD//wCAAAAAAAAAAABVVf//AAAAAAAA//8AAAAAVVUAAAAAAABVVQAAAAD//6qq//8AAP//VVX//wAA//+qqgAAAAD///8//3//P/9//z//f/8//3////9/////f////3////9//38AAP9/AAD/fwAA/38AAP9/////f////3////9///9UVVRVVFVUVVRVVFVUVVRVVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqVFVUVVRVVFVUVVRVVFVUVVRVVFVUVVRVVFVUVVRVVFX/f////3////9/////f////3////9/////f////3///////3////9/////f////3//f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qcg5x")
+
+[node name="desktest" instance=ExtResource("1_v5ewl")]
+
+[node name="Desk" parent="." index="0"]
+mesh = SubResource("ArrayMesh_qfas3")

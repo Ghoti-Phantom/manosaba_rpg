@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=4 uid="uid://5ct0tfsfxlod"]
+
+[ext_resource type="PackedScene" uid="uid://78xm5m1jcmuu" path="res://assets/Obj3D/WindowLibrary.glb" id="1_oosla"]
+[ext_resource type="Texture2D" uid="uid://k7at2ijskxbl" path="res://assets/Art2/walitu/3.png" id="2_q32co"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4rll5"]
+resource_name = "材质.002"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_q32co")
+roughness = 0.5
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_f65fg"]
+_surfaces = [{
+"aabb": AABB(-3, -1, -1, 6, 2, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "材质.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8w650"]
+resource_name = "WindowLibrary_立方体_009"
+_surfaces = [{
+"aabb": AABB(-3, -1, -1, 6, 2, 2),
+"attribute_data": PackedByteArray("VGX/XzheqkpUZapKOF7/XzhOVUWqSlRlqkpVRThOVGUcR1VFOE6qWhxHqlo4TlVF/////wAAAAD//wAAAAD//xxHqkqqSv9fHEf/X6pKqkrjSFRlVUVVReNIVUVVRVRl"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_4rll5"),
+"name": "材质.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP///78AAP//AAD/vwAA//////+/AAAAAAAA/78AAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAP//////////////////AAD/////AAD///////8AAP//AIAAAP////8AgP///////wCAAAAAAP//AIAAAAAAAABU1f//AAD//1TV//8AAAAAVNUAAAAA//9U1f////8AAFTVAAD/////VNUAAP//AABU1f///////1TV/3////9/////f////3////8//7//P/+//z//v/8//7//v/9//7//f/+//3//v/9//3////9/////f////3///6oqVNWqKlTVqipU1aoqVNVU1aoqVNWqKlTVqipU1aoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_f65fg")
+
+[node name="WindowLibrary" instance=ExtResource("1_oosla")]
+
+[node name="立方体" parent="." index="0"]
+mesh = SubResource("ArrayMesh_8w650")

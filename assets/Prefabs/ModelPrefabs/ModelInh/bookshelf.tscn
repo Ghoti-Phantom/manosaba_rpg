@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=4 uid="uid://ci7bby5gn64rj"]
+
+[ext_resource type="PackedScene" uid="uid://c4kbydc1alp1a" path="res://assets/Obj3D/bookshelf.glb" id="1_go5ff"]
+[ext_resource type="Texture2D" uid="uid://v6ivnkht8r7w" path="res://assets/Art2/walitu/walitu1.png" id="2_yaf5b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10572"]
+resource_name = "材质"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_yaf5b")
+roughness = 0.5
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yd026"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2.43389, 2),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAwACAAEAAAADAAQAAwAFAAQAAAAEAAUABQADAAYAAwABAAYAAAAFAAcAAQAAAAcABQAIAAcAAQAHAAgABQAGAAkAAQAJAAYABQAJAAgAAQAIAAkA"),
+"name": "材质",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAOxE//8AAAAAAAD//wAA//8AAP//AAD//wAAAAAAAP////8AAAAA///sRP//AAAAAP//AAAAAAAA/////wAA////////AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yaf5b"]
+resource_name = "bookshelfmat_立方体_001"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2.43389, 2),
+"attribute_data": PackedByteArray("3uaWzP//8r7//5bM3uY6mv//Opr//5bM3uY6mv//Opre5pbM3uaWzP//Opr//5bM3ubyvt7mOppM5bN5Q87GZkzlxmZDzrN5kLMtmbHM0WaxzC2ZkLPRZt7mlsz//zqa//+WzN7mOppDzsRlTOVoM0zlxGVDzmgz"),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAQAAAAMAAQADAAQABQAGAAcABQAIAAYACQAKAAsACgAJAAwACgAMAA0ADgAPABAADgARAA8AEgATABQAEgAVABMAFgAXABgAFgAZABcAGgAbABwAGgAdABsA"),
+"material": SubResource("StandardMaterial3D_10572"),
+"name": "材质",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 30,
+"vertex_data": PackedByteArray("AAAAAAAA/78AAOxE////vwAAAAD///+/AAD//wAA/78AAP//////vwAAAAAAAP///////wAA//8AAP//AAD/////AAAAAP////8AAP///7//////AAD/v///AAAAAP+////sRP///7//////////v///AAD//wCAAADsRP//AID//+xE//8AgAAAAAD//wCAAAAAAAAA/7///wAA////v///AAAAAP+/AAAAAP///7//////AAD//wAA////////AAD//wAA/////////////wAA7ET//wCA////////AID//+xE//8AgAAA/////wCA5n/M//R/6f//f///7n/c//9/////f////3////9/////f///mX8zAOh/CwD/fwAAVH9VAP9/AAD/f////3////9/////f///AAD/fwAA/38AAP9/AAD/f/9//7//f/+//3//v/9//7//f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_yd026")
+
+[node name="bookshelfmat" instance=ExtResource("1_go5ff")]
+
+[node name="BookShelf" parent="." index="0"]
+mesh = SubResource("ArrayMesh_yaf5b")

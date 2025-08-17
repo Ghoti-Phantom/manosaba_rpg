@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://cok220jv4m8a"]
+
+[ext_resource type="PackedScene" uid="uid://cq6rv4iwts78f" path="res://assets/Obj2D/woodenbench.glb" id="1_yn7hw"]
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://assets/Art2/walitu/tiledassest.tres" id="2_leob8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6c1jq"]
+resource_name = "材质.005"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_leob8")
+roughness = 0.5
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3xm0e"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "材质.005",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rxea3"]
+resource_name = "woodenbench_平面_002"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray(210, 229, 79, 49, 255, 255, 0, 0, 255, 255, 79, 49, 210, 229, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_6c1jq"),
+"name": "材质.005",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3xm0e")
+
+[node name="woodenbench" instance=ExtResource("1_yn7hw")]
+
+[node name="WoodenbBench" parent="." index="0"]
+mesh = SubResource("ArrayMesh_rxea3")

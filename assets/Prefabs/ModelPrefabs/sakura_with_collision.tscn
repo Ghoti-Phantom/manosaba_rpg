@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhp8l6qfbgmjb"]
+
+[ext_resource type="PackedScene" uid="uid://dykwdqus1tpw" path="res://assets/Prefabs/ModelPrefabs/ModelInh/sakura.tscn" id="1_nt1nj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o7ikm"]
+size = Vector3(0.210449, 0.108887, 0.313477)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="Sakura2" parent="." instance=ExtResource("1_nt1nj")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0.13668, 0, -0.0530713)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12793, -0.445557, 0.0126953)
+shape = SubResource("BoxShape3D_o7ikm")
