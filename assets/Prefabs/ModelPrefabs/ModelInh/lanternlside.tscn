@@ -7,6 +7,7 @@
 resource_name = "材质.003"
 transparency = 4
 cull_mode = 2
+albedo_color = Color(9.5, 8.7, 6.35, 1)
 albedo_texture = ExtResource("2_puaa7")
 roughness = 0.5
 texture_filter = 2

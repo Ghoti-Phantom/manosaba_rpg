@@ -1,0 +1,91 @@
+[gd_scene load_steps=17 format=3 uid="uid://ic7h7mg6eiep"]
+
+[ext_resource type="Script" uid="uid://bwgpx1di4kgc4" path="res://assets/Scripts/player_control.gd" id="1_oshkq"]
+[ext_resource type="PackedScene" uid="uid://85ldtbk3yaap" path="res://assets/Prefabs/Characters/emmatest.tscn" id="2_21amn"]
+[ext_resource type="PackedScene" uid="uid://ci7bby5gn64rj" path="res://assets/Prefabs/ModelPrefabs/ModelInh/bookshelf.tscn" id="3_4j2ja"]
+[ext_resource type="PackedScene" uid="uid://cbwmy3bs5f1iq" path="res://assets/Prefabs/ModelPrefabs/ModelInh/desktest.tscn" id="4_vak7u"]
+[ext_resource type="PackedScene" uid="uid://dob4sjbsan1ld" path="res://assets/Prefabs/ModelPrefabs/ModelInh/floor2.tscn" id="5_v5s6i"]
+[ext_resource type="PackedScene" uid="uid://bqgqxovaypswf" path="res://assets/Prefabs/ModelPrefabs/ModelInh/floor.tscn" id="6_jde4h"]
+[ext_resource type="PackedScene" uid="uid://cumg1kk6ye8hn" path="res://assets/Prefabs/ModelPrefabs/ModelInh/walldown.tscn" id="7_1hx8m"]
+[ext_resource type="PackedScene" uid="uid://b2qeumxjx2lgr" path="res://assets/Prefabs/ModelPrefabs/ModelInh/wallup.tscn" id="8_b68cx"]
+[ext_resource type="PackedScene" uid="uid://b25wcu1cnfdr5" path="res://assets/Prefabs/ModelPrefabs/ModelInh/wall_library.tscn" id="9_p0h6o"]
+[ext_resource type="PackedScene" uid="uid://5ct0tfsfxlod" path="res://assets/Prefabs/ModelPrefabs/ModelInh/windowlibrary.tscn" id="10_so0f0"]
+[ext_resource type="PackedScene" uid="uid://c7l1q0wh878xh" path="res://assets/Obj2D/Sakura.glb" id="11_f3lcv"]
+[ext_resource type="MeshLibrary" uid="uid://b3ateb7juu8m0" path="res://test_folder/meshlibrarytt.tres" id="12_c01hv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sy1yy"]
+radius = 0.438304
+height = 1.92014
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bf3mn"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_dwj6o"]
+sky_material = SubResource("ProceduralSkyMaterial_bf3mn")
+
+[sub_resource type="Environment" id="Environment_sy1yy"]
+background_mode = 2
+background_energy_multiplier = 2.6
+sky = SubResource("Sky_dwj6o")
+ambient_light_source = 3
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.2246, 3.81681, -19.0105)
+script = ExtResource("1_oshkq")
+
+[node name="emmatest" parent="CharacterBody3D" instance=ExtResource("2_21amn")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0.00751114, 0.0129433, -0.0337138)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_sy1yy")
+
+[node name="CameraPivot" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(-4.37114e-08, 0.707107, -0.707107, 0, 0.707107, 0.707107, 1, 3.09086e-08, -3.09086e-08, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+current = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sy1yy")
+
+[node name="bookshelfmat" parent="." instance=ExtResource("3_4j2ja")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.39137, 0, -7.57067)
+
+[node name="desktest" parent="." instance=ExtResource("4_vak7u")]
+
+[node name="floor2" parent="." instance=ExtResource("5_v5s6i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.851956, 0, -9.55891)
+
+[node name="floor" parent="." instance=ExtResource("6_jde4h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.59658, 0, -9.16135)
+visible = false
+
+[node name="walldown" parent="." instance=ExtResource("7_1hx8m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.04892, 0, -5.50548)
+
+[node name="wallup" parent="." instance=ExtResource("8_b68cx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.16254, 0, -0.0405846)
+
+[node name="WallLibrary" parent="." instance=ExtResource("9_p0h6o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.311769, 0, 1.09722)
+
+[node name="WindowLibrary" parent="." instance=ExtResource("10_so0f0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.67042, 0, -0.381052)
+
+[node name="desktest2" parent="." instance=ExtResource("4_vak7u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8989, 0, -1.25175)
+
+[node name="Sakura2" parent="." instance=ExtResource("11_f3lcv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.62436, 0, 3.65303)
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("12_c01hv")
+data = {
+"cells": PackedInt32Array(65535, 2, 0)
+}

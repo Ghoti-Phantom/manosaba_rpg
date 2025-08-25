@@ -46,4 +46,5 @@ shadow_mesh = SubResource("ArrayMesh_4e83o")
 [node name="emmatest" instance=ExtResource("1_g6gv7")]
 
 [node name="Emma" parent="." index="0"]
+layers = 524288
 mesh = SubResource("ArrayMesh_r3pub")

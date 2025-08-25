@@ -11,9 +11,25 @@ config_version=5
 [application]
 
 config/name="manosaba_rpg_repo"
-run/main_scene="uid://cs250lkw41t5p"
-config/features=PackedStringArray("4.4", "Forward Plus")
+run/main_scene="uid://dtxlngwmngjey"
+config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="manosaba_rpg_repo"
+
+[editor]
+
+import/use_multiple_threads=false
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/GodotInk/plugin.cfg", "res://addons/YATI/plugin.cfg")
+
+[filesystem]
+
+import/enabled=true
 
 [importer_defaults]
 
@@ -44,6 +60,15 @@ move_right={
 ]
 }
 
+[layer_names]
+
+3d_render/layer_20="dynamic_obj"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/canvas_textures/default_texture_repeat=1
+textures/vram_compression/compress_with_gpu=false
+textures/default_filters/anisotropic_filtering_level=4
+textures/decals/filter=2
+textures/light_projectors/filter=2

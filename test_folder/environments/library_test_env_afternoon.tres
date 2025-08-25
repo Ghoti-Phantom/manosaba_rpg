@@ -1,0 +1,21 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://muinmxotpvb8"]
+
+[ext_resource type="Texture2D" uid="uid://b8tlaanw8wsum" path="res://test_folder/sky_boxes/wasteland_clouds_puresky_4k.exr" id="1_l12lb"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_aeuat"]
+panorama = ExtResource("1_l12lb")
+energy_multiplier = 0.3
+
+[sub_resource type="Sky" id="Sky_s27is"]
+sky_material = SubResource("PanoramaSkyMaterial_aeuat")
+
+[resource]
+background_mode = 2
+background_energy_multiplier = 2.0
+sky = SubResource("Sky_s27is")
+ambient_light_source = 3
+tonemap_mode = 2
+sdfgi_bounce_feedback = 0.81
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_sky_affect = 0.0

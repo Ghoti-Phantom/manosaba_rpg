@@ -7,8 +7,12 @@
 resource_name = "材质.003"
 transparency = 4
 cull_mode = 2
+albedo_color = Color(9.5, 8.7, 6.35, 1)
 albedo_texture = ExtResource("2_nn65d")
+albedo_texture_force_srgb = true
 roughness = 0.5
+emission = Color(0.883333, 1, 0, 1)
+emission_energy_multiplier = 16.0
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_g3n41"]

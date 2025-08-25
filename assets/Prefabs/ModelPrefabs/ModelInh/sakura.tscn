@@ -1,49 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://dykwdqus1tpw"]
+[gd_scene load_steps=2 format=3 uid="uid://dfvcsadqnl18p"]
 
 [ext_resource type="PackedScene" uid="uid://c7l1q0wh878xh" path="res://assets/Obj2D/Sakura.glb" id="1_1chow"]
-[ext_resource type="Texture2D" uid="uid://b03agrpw0jx2" path="res://assets/Art2/monvdao_scene/library/yinghua.png" id="2_hw7d3"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1u1j6"]
-resource_name = "材质.005"
-transparency = 4
-cull_mode = 2
-albedo_texture = ExtResource("2_hw7d3")
-roughness = 0.5
-texture_filter = 2
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_rqh41"]
-_surfaces = [{
-"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
-"format": 34896613377,
-"index_count": 6,
-"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
-"name": "材质.005",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-}]
-blend_shape_mode = 0
-
-[sub_resource type="ArrayMesh" id="ArrayMesh_kiv7v"]
-resource_name = "Sakura_平面_003"
-_surfaces = [{
-"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
-"attribute_data": PackedByteArray(119, 103, 11, 131, 215, 152, 198, 81, 215, 152, 11, 131, 119, 103, 198, 81),
-"format": 34896613399,
-"index_count": 6,
-"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
-"material": SubResource("StandardMaterial3D_1u1j6"),
-"name": "材质.005",
-"primitive": 3,
-"uv_scale": Vector4(0, 0, 0, 0),
-"vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
-}]
-blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_rqh41")
 
 [node name="Sakura2" instance=ExtResource("1_1chow")]
-
-[node name="Sakura" parent="." index="0"]
-mesh = SubResource("ArrayMesh_kiv7v")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=9 format=3 uid="uid://dxb6a7tm7d3go"]
+
+[ext_resource type="PackedScene" uid="uid://ci7bby5gn64rj" path="res://assets/Prefabs/ModelPrefabs/ModelInh/bookshelf.tscn" id="1_yjafi"]
+[ext_resource type="PackedScene" uid="uid://cbwmy3bs5f1iq" path="res://assets/Prefabs/ModelPrefabs/ModelInh/desktest.tscn" id="2_0cd4f"]
+[ext_resource type="PackedScene" uid="uid://dob4sjbsan1ld" path="res://assets/Prefabs/ModelPrefabs/ModelInh/floor2.tscn" id="3_qimgs"]
+[ext_resource type="PackedScene" uid="uid://bqgqxovaypswf" path="res://assets/Prefabs/ModelPrefabs/ModelInh/floor.tscn" id="4_dd1sr"]
+[ext_resource type="PackedScene" uid="uid://cumg1kk6ye8hn" path="res://assets/Prefabs/ModelPrefabs/ModelInh/walldown.tscn" id="5_hdm8f"]
+[ext_resource type="PackedScene" uid="uid://b2qeumxjx2lgr" path="res://assets/Prefabs/ModelPrefabs/ModelInh/wallup.tscn" id="6_ei3ax"]
+[ext_resource type="PackedScene" uid="uid://b25wcu1cnfdr5" path="res://assets/Prefabs/ModelPrefabs/ModelInh/wall_library.tscn" id="7_mrhix"]
+[ext_resource type="PackedScene" uid="uid://5ct0tfsfxlod" path="res://assets/Prefabs/ModelPrefabs/ModelInh/windowlibrary.tscn" id="8_c4vba"]
+
+[node name="TempScene2" type="Node3D"]
+
+[node name="bookshelfmat" parent="." instance=ExtResource("1_yjafi")]
+
+[node name="desktest" parent="." instance=ExtResource("2_0cd4f")]
+
+[node name="floor2" parent="." instance=ExtResource("3_qimgs")]
+
+[node name="floor" parent="." instance=ExtResource("4_dd1sr")]
+
+[node name="walldown" parent="." instance=ExtResource("5_hdm8f")]
+
+[node name="wallup" parent="." instance=ExtResource("6_ei3ax")]
+
+[node name="WallLibrary" parent="." instance=ExtResource("7_mrhix")]
+
+[node name="WindowLibrary" parent="." instance=ExtResource("8_c4vba")]

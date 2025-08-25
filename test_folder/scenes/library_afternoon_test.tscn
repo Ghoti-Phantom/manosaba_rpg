@@ -1,0 +1,331 @@
+[gd_scene load_steps=17 format=3 uid="uid://dtxlngwmngjey"]
+
+[ext_resource type="Texture2D" uid="uid://b8tlaanw8wsum" path="res://test_folder/sky_boxes/wasteland_clouds_puresky_4k.exr" id="1_gp7w4"]
+[ext_resource type="Script" uid="uid://bwgpx1di4kgc4" path="res://assets/Scripts/player_control.gd" id="2_gp7w4"]
+[ext_resource type="PackedScene" uid="uid://85ldtbk3yaap" path="res://assets/Prefabs/Characters/emmatest.tscn" id="3_p3p3a"]
+[ext_resource type="MeshLibrary" uid="uid://cc8o50rawqh02" path="res://test_folder/mesh_lib_test/mesh_lib_test_fix.tres" id="4_3ybpo"]
+[ext_resource type="PackedScene" uid="uid://w5ipx7libxei" path="res://assets/Prefabs/ModelPrefabs/ModelInh/lanternfside.tscn" id="5_q623r"]
+[ext_resource type="PackedScene" uid="uid://bipfm868vlrb4" path="res://assets/Prefabs/ModelPrefabs/ModelInh/lanternlside.tscn" id="6_l50vt"]
+[ext_resource type="PackedScene" uid="uid://d12ihk8j40fj4" path="res://assets/Prefabs/ModelPrefabs/ModelInh/lanternrside.tscn" id="7_2n7wl"]
+[ext_resource type="PackedScene" uid="uid://bd0aik3hs31n3" path="res://assets/Prefabs/ModelPrefabs/ModelInh/paper.tscn" id="8_arbhq"]
+[ext_resource type="PackedScene" uid="uid://wmwphx1n78u8" path="res://assets/Prefabs/ModelPrefabs/ModelInh/book.tscn" id="9_n1dri"]
+[ext_resource type="PackedScene" uid="uid://cok220jv4m8a" path="res://assets/Prefabs/ModelPrefabs/ModelInh/woodenbench.tscn" id="10_5erux"]
+[ext_resource type="PackedScene" uid="uid://dhp8l6qfbgmjb" path="res://assets/Prefabs/ModelPrefabs/sakura_with_collision.tscn" id="11_giu2f"]
+[ext_resource type="VoxelGIData" uid="uid://dai7geq314hak" path="res://test_folder/voxel_GI_bake/library_test.VoxelGI_data.res" id="12_gp7w4"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_aeuat"]
+panorama = ExtResource("1_gp7w4")
+energy_multiplier = 0.3
+
+[sub_resource type="Sky" id="Sky_s27is"]
+sky_material = SubResource("PanoramaSkyMaterial_aeuat")
+
+[sub_resource type="Environment" id="Environment_p3p3a"]
+background_mode = 2
+background_energy_multiplier = 0.6
+sky = SubResource("Sky_s27is")
+ambient_light_source = 3
+tonemap_mode = 2
+sdfgi_bounce_feedback = 0.81
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_sky_affect = 0.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yq2yd"]
+radius = 0.438304
+height = 1.92014
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_p3p3a")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, -0.325568, 0.945519, 0, 0.945519, 0.325568, -1, 1.4231e-08, -4.13299e-08, 28.2772, 11.8865, 1.64063)
+light_color = Color(0.665, 0.86925, 0.95, 1)
+light_energy = 10.0
+light_indirect_energy = 0.5
+light_bake_mode = 1
+shadow_enabled = true
+shadow_bias = 0.04
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.63759, 3.04968, 0.689144)
+script = ExtResource("2_gp7w4")
+
+[node name="emmatest" parent="CharacterBody3D" instance=ExtResource("3_p3p3a")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0.00751114, 0.0129433, -0.0337138)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_yq2yd")
+
+[node name="CameraPivot" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(-4.37114e-08, 0.5, -0.866026, 0, 0.866026, 0.5, 1, 2.18557e-08, -3.78552e-08, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/CameraPivot"]
+transform = Transform3D(1, 3.55271e-15, 0, 0, 1, -2.98023e-08, 0, 2.98023e-08, 1, -2.38419e-07, 0.538011, 5.10752)
+current = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CharacterBody3D"]
+visible = false
+light_energy = 3.0
+light_indirect_energy = 3.0
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.90628, 3.7156, 1.30808)
+visible = false
+shadow_enabled = true
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("4_3ybpo")
+cell_scale = 1.01
+data = {
+"cells": PackedInt32Array(65531, 65531, 2, 65531, 65532, 2, 65531, 65533, 2, 65531, 65534, 2, 65531, 65535, 2, 65531, 0, 2, 65531, 1, 2, 65531, 2, 2, 65531, 3, 2, 65531, 4, 2, 65531, 5, 2, 65532, 65531, 2, 65532, 65532, 2, 65532, 65533, 2, 65532, 65534, 2, 65532, 65535, 2, 65532, 0, 2, 65532, 1, 2, 65532, 2, 2, 65532, 3, 2, 65532, 4, 2, 65532, 5, 2, 65533, 65531, 2, 65533, 65532, 2, 65533, 65533, 2, 65533, 65534, 2, 65533, 65535, 2, 65533, 0, 2, 65533, 1, 2, 65533, 2, 2, 65533, 3, 2, 65533, 4, 2, 65533, 5, 2, 65534, 65531, 2, 65534, 65532, 2, 65534, 65533, 2, 65534, 65534, 2, 65534, 65535, 2, 65534, 0, 2, 65534, 1, 2, 65534, 2, 2, 65534, 3, 2, 65534, 4, 2, 65534, 5, 2, 65535, 65531, 2, 65535, 65532, 2, 65535, 65533, 2, 65535, 65534, 2, 65535, 65535, 2, 65535, 0, 2, 65535, 1, 2, 65535, 2, 2, 65535, 3, 2, 65535, 4, 2, 65535, 5, 2, 0, 65531, 2, 0, 65532, 2, 0, 65533, 2, 0, 65534, 2, 0, 65535, 2, 0, 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 1, 65531, 2, 1, 65532, 2, 1, 65533, 2, 1, 65534, 2, 1, 65535, 2, 1, 0, 2, 1, 1, 2, 1, 2, 2, 1, 3, 2, 1, 4, 2, 1, 5, 2, 2, 65531, 2, 2, 65532, 2, 2, 65533, 2, 2, 65534, 2, 2, 65535, 2, 2, 0, 2, 2, 1, 2, 2, 2, 2, 2, 3, 2, 2, 4, 2, 2, 5, 2, 3, 65531, 2, 3, 65532, 2, 3, 65533, 2, 3, 65534, 2, 3, 65535, 2, 3, 0, 2, 3, 1, 2, 3, 2, 2, 3, 3, 2, 3, 4, 2, 3, 5, 2, 4, 65531, 2, 4, 65532, 2, 4, 65533, 2, 4, 65534, 2, 4, 65535, 2, 4, 0, 2, 4, 1, 2, 4, 2, 2, 4, 3, 2, 4, 4, 2, 4, 5, 2, 5, 65531, 2, 5, 65532, 2, 5, 65533, 2, 5, 65534, 2, 5, 65535, 2, 5, 0, 2, 5, 1, 2, 5, 2, 2, 5, 3, 2, 5, 4, 2, 5, 5, 2, 6, 65531, 2, 6, 65532, 2, 6, 65533, 2, 6, 65534, 2, 6, 65535, 2, 6, 0, 2, 6, 1, 2, 6, 2, 2, 6, 3, 2, 6, 4, 2, 6, 5, 2, 7, 65531, 2, 7, 65532, 2, 7, 65533, 2, 7, 65534, 2, 7, 65535, 2, 7, 0, 2, 7, 1, 2, 7, 2, 2, 7, 3, 2, 7, 4, 2, 7, 5, 2, 8, 65531, 2, 8, 65532, 2, 8, 65533, 2, 8, 65534, 2, 8, 65535, 2, 8, 0, 2, 8, 1, 2, 8, 2, 2, 8, 3, 2, 8, 4, 2, 8, 5, 2, 9, 65531, 2, 9, 65532, 2, 9, 65533, 2, 9, 65534, 2, 9, 65535, 2, 9, 0, 2, 9, 1, 2, 9, 2, 2, 9, 3, 2, 9, 4, 2, 9, 5, 2, 10, 65531, 2, 10, 65532, 2, 10, 65533, 2, 10, 65534, 2, 10, 65535, 2, 10, 0, 2, 10, 1, 2, 10, 2, 2, 10, 3, 2, 10, 4, 2, 10, 5, 2, 131068, 65531, 1441792, 131068, 65532, 1441792, 131068, 65533, 1441792, 131068, 65534, 1441792, 131068, 2, 1441792, 131068, 3, 1441792, 131068, 4, 1441792, 131068, 5, 1441792, 131071, 65532, 1048577, 131071, 4, 1048577, 65537, 65531, 1441792, 65537, 65532, 1441792, 65537, 65533, 1441792, 65537, 65534, 1441792, 65537, 2, 1441792, 65537, 3, 1441792, 65537, 4, 1441792, 65537, 5, 1441792, 131067, 65530, 6, 131068, 65530, 6, 131069, 65530, 6, 131070, 65530, 6, 131071, 65530, 6, 65536, 65530, 6, 65537, 65530, 6, 65538, 65530, 6, 65539, 65530, 6, 65540, 65530, 6, 65541, 65530, 6, 65542, 65530, 6, 65543, 65530, 6, 65544, 65530, 6, 65545, 65530, 6, 65546, 65530, 6, 131081, 65530, 131078, 131082, 65530, 131078, 131080, 65530, 131078, 131079, 65530, 131078, 131078, 65530, 131078, 131077, 65530, 131078, 131076, 65530, 131078, 131075, 65530, 131078, 131074, 65530, 131078, 131073, 65530, 131078, 131072, 65530, 131078, 196607, 65530, 131078, 196606, 65530, 131078, 196605, 65530, 131078, 196604, 65530, 131078, 196603, 65530, 131078, 131067, 65531, 1048582, 131067, 65532, 1048582, 131067, 65533, 1048582, 131067, 65534, 1048582, 131067, 65535, 1048582, 131067, 1, 1048582, 131067, 2, 1048582, 131067, 3, 1048582, 131067, 4, 1048582, 131067, 5, 1048582, 196603, 65531, 1048582, 196603, 65532, 1048582, 196603, 65533, 1048582, 196603, 65534, 1048582, 196603, 65535, 1048582, 196603, 1, 1048582, 196603, 2, 1048582, 196603, 3, 1048582, 196603, 4, 1048582, 196603, 5, 1048582, 65547, 65534, 1441798, 65547, 65533, 1441798, 65547, 65530, 1441798, 65547, 65531, 1441798, 65547, 65532, 1441798, 65547, 65535, 1441798, 65547, 0, 1441798, 65547, 1, 1441798, 65547, 2, 1441798, 65547, 3, 1441798, 65547, 4, 1441798, 65547, 5, 1441798, 131083, 5, 1441798, 131083, 4, 1441798, 131083, 3, 1441798, 131083, 2, 1441798, 131083, 65534, 1441798, 131083, 65533, 1441798, 131083, 65532, 1441798, 131083, 65531, 1441798, 131083, 65530, 1441798, 65544, 6, 655366, 65545, 6, 655366, 65546, 6, 655366, 65547, 6, 655366, 65543, 6, 655366, 65542, 6, 655366, 65541, 6, 655366, 65540, 6, 655366, 65539, 6, 655366, 65538, 6, 655366, 65537, 6, 655366, 65536, 6, 655366, 131071, 6, 655366, 131070, 6, 655366, 131069, 6, 655366, 131083, 6, 524294, 131082, 6, 524294, 131081, 6, 524294, 131080, 6, 524294, 131079, 6, 524294, 131078, 6, 524294, 131077, 6, 524294, 131076, 6, 524294, 131075, 6, 524294, 131074, 6, 524294, 131073, 6, 524294, 131072, 6, 524294, 196607, 6, 524294, 196606, 6, 524294, 196605, 6, 524294, 131068, 6, 524294, 131067, 6, 524294, 196604, 6, 524294, 196603, 6, 524294, 65542, 65531, 1441792, 65542, 65532, 1441792, 65542, 65533, 1441792, 65542, 65534, 1441792, 65542, 2, 1441792, 65542, 3, 1441792, 65542, 4, 1441792, 65542, 5, 1441792, 65546, 65531, 1441792, 65546, 65532, 1441792, 65546, 65533, 1441792, 65546, 65534, 1441792, 65546, 65535, 1441792, 65546, 0, 1441792, 65546, 1, 1441792, 65546, 2, 1441792, 65546, 3, 1441792, 65546, 4, 1441792, 65546, 5, 1441792, 65540, 65532, 1441793, 65540, 4, 1441793, 196619, 65531, 1441798, 196619, 65530, 1441798, 196619, 65532, 1441798, 196619, 65533, 1441798, 196619, 65534, 1441798, 196619, 2, 1441798, 196619, 3, 1441798, 196619, 4, 1441798, 196619, 5, 1441798, 196619, 6, 1441798, 196618, 6, 655366, 196617, 6, 655366, 196616, 6, 655366, 196615, 6, 655366, 196614, 6, 655366, 196613, 6, 655366, 196612, 6, 655366, 196611, 6, 655366, 196610, 6, 655366, 196609, 6, 655366, 196608, 6, 655366, 262143, 6, 655366, 262142, 6, 655366, 262141, 6, 655366, 262140, 6, 655366, 262139, 6, 655366, 262139, 5, 1048582, 262139, 4, 1048582, 262139, 3, 1048582, 262139, 2, 1048582, 262139, 1, 1048582, 262139, 65535, 1048582, 262139, 65534, 1048582, 262139, 65533, 1048582, 262139, 65532, 1048582, 262139, 65531, 1048582, 262139, 65530, 1048582, 262140, 65530, 6, 262141, 65530, 6, 262142, 65530, 6, 262143, 65530, 6, 196608, 65530, 6, 196609, 65530, 6, 196610, 65530, 6, 196611, 65530, 6, 196612, 65530, 6, 196613, 65530, 6, 196614, 65530, 6, 196615, 65530, 6, 196616, 65530, 6, 196617, 65530, 6, 196618, 65530, 6, 327675, 65530, 1441794, 327675, 65531, 1441794, 327675, 65532, 1441794, 327675, 65533, 1441794, 327675, 65534, 1441794, 327675, 65535, 1441794, 327675, 0, 1441794, 327675, 1, 1441794, 327675, 2, 1441794, 327675, 3, 1441794, 327675, 4, 1441794, 327675, 5, 1441794, 327675, 6, 1441794, 327676, 65530, 1441794, 327676, 65531, 1441794, 327676, 65532, 1441794, 327676, 65533, 1441794, 327676, 65534, 1441794, 327676, 65535, 1441794, 327676, 0, 1441794, 327676, 1, 1441794, 327676, 2, 1441794, 327676, 3, 1441794, 327676, 4, 1441794, 327676, 5, 1441794, 327676, 6, 1441794, 327677, 65530, 1441794, 327677, 65531, 1441794, 327677, 65532, 1441794, 327677, 65533, 1441794, 327677, 65534, 1441794, 327677, 65535, 1441794, 327677, 0, 1441794, 327677, 1, 1441794, 327677, 2, 1441794, 327677, 3, 1441794, 327677, 4, 1441794, 327677, 5, 1441794, 327677, 6, 1441794, 327678, 65530, 1441794, 327678, 65531, 1441794, 327678, 65532, 1441794, 327678, 65533, 1441794, 327678, 65534, 1441794, 327678, 65535, 1441794, 327678, 0, 1441794, 327678, 1, 1441794, 327678, 2, 1441794, 327678, 3, 1441794, 327678, 4, 1441794, 327678, 5, 1441794, 327678, 6, 1441794, 327679, 65530, 1441794, 327679, 65531, 1441794, 327679, 65532, 1441794, 327679, 65533, 1441794, 327679, 65534, 1441794, 327679, 65535, 1441794, 327679, 0, 1441794, 327679, 1, 1441794, 327679, 2, 1441794, 327679, 3, 1441794, 327679, 4, 1441794, 327679, 5, 1441794, 327679, 6, 1441794, 262144, 65530, 1441794, 262144, 65531, 1441794, 262144, 65532, 1441794, 262144, 65533, 1441794, 262144, 65534, 1441794, 262144, 65535, 1441794, 262144, 0, 1441794, 262144, 1, 1441794, 262144, 2, 1441794, 262144, 3, 1441794, 262144, 4, 1441794, 262144, 5, 1441794, 262144, 6, 1441794, 262145, 65530, 1441794, 262145, 65531, 1441794, 262145, 65532, 1441794, 262145, 65533, 1441794, 262145, 65534, 1441794, 262145, 65535, 1441794, 262145, 0, 1441794, 262145, 1, 1441794, 262145, 2, 1441794, 262145, 3, 1441794, 262145, 4, 1441794, 262145, 5, 1441794, 262145, 6, 1441794, 262146, 65530, 1441794, 262146, 65531, 1441794, 262146, 65532, 1441794, 262146, 65533, 1441794, 262146, 65534, 1441794, 262146, 65535, 1441794, 262146, 0, 1441794, 262146, 1, 1441794, 262146, 2, 1441794, 262146, 3, 1441794, 262146, 4, 1441794, 262146, 5, 1441794, 262146, 6, 1441794, 262147, 65530, 1441794, 262147, 65531, 1441794, 262147, 65532, 1441794, 262147, 65533, 1441794, 262147, 65534, 1441794, 262147, 65535, 1441794, 262147, 0, 1441794, 262147, 1, 1441794, 262147, 2, 1441794, 262147, 3, 1441794, 262147, 4, 1441794, 262147, 5, 1441794, 262147, 6, 1441794, 262148, 65530, 1441794, 262148, 65531, 1441794, 262148, 65532, 1441794, 262148, 65533, 1441794, 262148, 65534, 1441794, 262148, 65535, 1441794, 262148, 0, 1441794, 262148, 1, 1441794, 262148, 2, 1441794, 262148, 3, 1441794, 262148, 4, 1441794, 262148, 5, 1441794, 262148, 6, 1441794, 262149, 65530, 1441794, 262149, 65531, 1441794, 262149, 65532, 1441794, 262149, 65533, 1441794, 262149, 65534, 1441794, 262149, 65535, 1441794, 262149, 0, 1441794, 262149, 1, 1441794, 262149, 2, 1441794, 262149, 3, 1441794, 262149, 4, 1441794, 262149, 5, 1441794, 262149, 6, 1441794, 262150, 65530, 1441794, 262150, 65531, 1441794, 262150, 65532, 1441794, 262150, 65533, 1441794, 262150, 65534, 1441794, 262150, 65535, 1441794, 262150, 0, 1441794, 262150, 1, 1441794, 262150, 2, 1441794, 262150, 3, 1441794, 262150, 4, 1441794, 262150, 5, 1441794, 262150, 6, 1441794, 262151, 65530, 1441794, 262151, 65531, 1441794, 262151, 65532, 1441794, 262151, 65533, 1441794, 262151, 65534, 1441794, 262151, 65535, 1441794, 262151, 0, 1441794, 262151, 1, 1441794, 262151, 2, 1441794, 262151, 3, 1441794, 262151, 4, 1441794, 262151, 5, 1441794, 262151, 6, 1441794, 262152, 65530, 1441794, 262152, 65531, 1441794, 262152, 65532, 1441794, 262152, 65533, 1441794, 262152, 65534, 1441794, 262152, 65535, 1441794, 262152, 0, 1441794, 262152, 1, 1441794, 262152, 2, 1441794, 262152, 3, 1441794, 262152, 4, 1441794, 262152, 5, 1441794, 262152, 6, 1441794, 262153, 65530, 1441794, 262153, 65531, 1441794, 262153, 65532, 1441794, 262153, 65533, 1441794, 262153, 65534, 1441794, 262153, 65535, 1441794, 262153, 0, 1441794, 262153, 1, 1441794, 262153, 2, 1441794, 262153, 3, 1441794, 262153, 4, 1441794, 262153, 5, 1441794, 262153, 6, 1441794, 262154, 65530, 1441794, 262154, 65531, 1441794, 262154, 65532, 1441794, 262154, 65533, 1441794, 262154, 65534, 1441794, 262154, 65535, 1441794, 262154, 0, 1441794, 262154, 1, 1441794, 262154, 2, 1441794, 262154, 3, 1441794, 262154, 4, 1441794, 262154, 5, 1441794, 262154, 6, 1441794, 262155, 65530, 1441794, 262155, 65531, 1441794, 262155, 65532, 1441794, 262155, 65533, 1441794, 262155, 65534, 1441794, 262155, 65535, 1441794, 262155, 0, 1441794, 262155, 1, 1441794, 262155, 2, 1441794, 262155, 3, 1441794, 262155, 4, 1441794, 262155, 5, 1441794, 262155, 6, 1441794, 262139, 0, 1048582, 65530, 0, 1048578, 65529, 0, 1048578, 65528, 0, 1048578, 65528, 1, 1048581, 65529, 1, 1048581, 65530, 1, 1048581, 65528, 65535, 1048581, 65529, 65535, 1048581, 65530, 65535, 1048581, 131064, 1, 5, 131065, 1, 5, 131066, 1, 5, 131064, 65535, 655365, 131065, 65535, 655365, 131066, 65535, 655365, 196600, 65535, 655365, 196601, 65535, 655365, 196602, 65535, 655365, 196600, 1, 5, 196601, 1, 5, 196602, 1, 5, 262136, 1, 5, 262137, 1, 5, 262138, 1, 5, 262136, 65535, 655365, 262137, 65535, 655365, 262138, 65535, 655365, 262138, 0, 655365, 262137, 0, 655365, 262136, 0, 655365, 65527, 65535, 655365, 65527, 0, 655365, 65527, 1, 655365, 131063, 65535, 655365, 131063, 0, 655365, 131063, 1, 655365, 196599, 65535, 655365, 196599, 0, 655365, 196599, 1, 655365, 131083, 1, 2, 131083, 0, 2, 131083, 65535, 2, 196619, 0, 1441799)
+}
+metadata/_editor_floor_ = Vector3(0, 3, 0)
+
+[node name="SingleItemCollection" type="Node3D" parent="."]
+
+[node name="LightCollection" type="Node3D" parent="SingleItemCollection"]
+
+[node name="lanternFside2" parent="SingleItemCollection/LightCollection" instance=ExtResource("5_q623r")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 19.8781, 3.68313, -8.00104)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SingleItemCollection/LightCollection/lanternFside2"]
+light_color = Color(0.95, 0.871625, 0.6365, 1)
+light_volumetric_fog_energy = 2.101
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="lanternFside3" parent="SingleItemCollection/LightCollection" instance=ExtResource("5_q623r")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 19.8781, 3.68313, -1.91008)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SingleItemCollection/LightCollection/lanternFside3"]
+light_color = Color(0.95, 0.871625, 0.6365, 1)
+light_volumetric_fog_energy = 2.101
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="lanternFside4" parent="SingleItemCollection/LightCollection" instance=ExtResource("5_q623r")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 19.8781, 3.68313, 4.03052)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SingleItemCollection/LightCollection/lanternFside4"]
+light_color = Color(0.95, 0.871625, 0.6365, 1)
+light_volumetric_fog_energy = 2.101
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="lanternFside5" parent="SingleItemCollection/LightCollection" instance=ExtResource("5_q623r")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 19.8781, 3.68313, 10.0336)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SingleItemCollection/LightCollection/lanternFside5"]
+light_color = Color(0.95, 0.871625, 0.6365, 1)
+light_volumetric_fog_energy = 2.101
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="lanternLside2" parent="SingleItemCollection/LightCollection" instance=ExtResource("6_l50vt")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 3.02256, 3.28584, -0.999824)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SingleItemCollection/LightCollection/lanternLside2"]
+transform = Transform3D(1, 0, -3.59989e-21, 0, 1, -8.35188e-23, 0, -8.35188e-23, 1, -0.668315, 0.0760388, 0)
+light_color = Color(0.95, 0.871625, 0.6365, 1)
+light_volumetric_fog_energy = 2.101
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="lanternLside1" parent="SingleItemCollection/LightCollection" instance=ExtResource("6_l50vt")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 13.0317, 3.28584, -1.08663)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SingleItemCollection/LightCollection/lanternLside1"]
+transform = Transform3D(1, 0, -3.59989e-21, 0, 1, -8.35188e-23, 0, -8.35188e-23, 1, -0.661045, 0.00298595, -0.245008)
+light_color = Color(0.95, 0.871625, 0.6365, 1)
+light_volumetric_fog_energy = 2.101
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="lanternLside3" parent="SingleItemCollection/LightCollection" instance=ExtResource("6_l50vt")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -6.98523, 3.28584, -0.999824)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SingleItemCollection/LightCollection/lanternLside3"]
+transform = Transform3D(1, 0, -3.59989e-21, 0, 1, -8.35188e-23, 0, -8.35188e-23, 1, -0.655109, 0.0336776, 0)
+light_color = Color(0.95, 0.871625, 0.6365, 1)
+light_volumetric_fog_energy = 2.101
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="lanternRside" parent="SingleItemCollection/LightCollection" instance=ExtResource("7_2n7wl")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -7.02478, 3.31432, 3.0661)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SingleItemCollection/LightCollection/lanternRside"]
+transform = Transform3D(1, 0, -3.59989e-21, 0, 1, -8.35188e-23, 0, -8.35188e-23, 1, 0.660959, -0.0129175, 0)
+light_color = Color(0.95, 0.871625, 0.6365, 1)
+light_volumetric_fog_energy = 2.101
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="lanternRside2" parent="SingleItemCollection/LightCollection" instance=ExtResource("7_2n7wl")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 2.95985, 3.31432, 3.0661)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SingleItemCollection/LightCollection/lanternRside2"]
+transform = Transform3D(1, 0, -3.59989e-21, 0, 1, -8.35188e-23, 0, -8.35188e-23, 1, 0.669617, 0.00207615, 0)
+light_color = Color(0.95, 0.871625, 0.6365, 1)
+light_volumetric_fog_energy = 2.101
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="lanternRside3" parent="SingleItemCollection/LightCollection" instance=ExtResource("7_2n7wl")]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 12.949, 3.34193, 3.06645)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SingleItemCollection/LightCollection/lanternRside3"]
+transform = Transform3D(1, 0, -3.59989e-21, 0, 1, -8.35188e-23, 0, -8.35188e-23, 1, 0.637248, -0.0333652, 0)
+light_color = Color(0.95, 0.871625, 0.6365, 1)
+light_volumetric_fog_energy = 2.101
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SingleItemCollection/LightCollection"]
+transform = Transform3D(-4.37114e-08, -0.422618, 0.906308, 0, 0.906308, 0.422618, -1, 1.84732e-08, -3.9616e-08, 24.9778, 6.67126, 1.21247)
+visible = false
+light_color = Color(0.741176, 0.890196, 0.94902, 1)
+light_indirect_energy = 4.0
+spot_range = 155.0
+spot_attenuation = 0.05
+
+[node name="SakuraLightCollection" type="Node3D" parent="SingleItemCollection/LightCollection"]
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="SingleItemCollection/LightCollection/SakuraLightCollection"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.94199, 7.44071, 0.615988)
+light_energy = 16.0
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+light_cull_mask = 4294443007
+spot_range = 5.459
+spot_attenuation = -1.25
+spot_angle = 17.38
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="SingleItemCollection/LightCollection/SakuraLightCollection"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.94199, 7.44071, 1.13164)
+light_energy = 16.0
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+light_cull_mask = 4294443007
+spot_range = 5.459
+spot_attenuation = -1.25
+spot_angle = 17.38
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="SingleItemCollection/LightCollection/SakuraLightCollection"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.94199, 7.44071, 0.174329)
+light_energy = 16.0
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+light_cull_mask = 4294443007
+spot_range = 5.459
+spot_attenuation = -1.25
+spot_angle = 17.38
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="SingleItemCollection/LightCollection/SakuraLightCollection"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.94199, 7.44071, -0.361928)
+light_energy = 16.0
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+light_cull_mask = 4294443007
+spot_range = 5.459
+spot_attenuation = -1.25
+spot_angle = 17.38
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="SingleItemCollection/LightCollection/SakuraLightCollection"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.94199, 7.44071, -1.05668)
+light_energy = 16.0
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+light_cull_mask = 4294443007
+spot_range = 5.459
+spot_attenuation = -1.25
+spot_angle = 17.38
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="SingleItemCollection/LightCollection/SakuraLightCollection"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.94199, 7.44071, 1.61125)
+light_energy = 16.0
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+light_cull_mask = 4294443007
+spot_range = 5.459
+spot_attenuation = -1.25
+spot_angle = 17.38
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="SingleItemCollection/LightCollection/SakuraLightCollection"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.94199, 7.44071, 2.24021)
+light_energy = 16.0
+light_volumetric_fog_energy = 0.0
+light_bake_mode = 1
+light_cull_mask = 4294443007
+spot_range = 5.459
+spot_attenuation = -1.25
+spot_angle = 17.38
+
+[node name="ItemCollection" type="Node3D" parent="SingleItemCollection"]
+
+[node name="paper" parent="SingleItemCollection/ItemCollection" instance=ExtResource("8_arbhq")]
+transform = Transform3D(-2.5134e-08, 0, 0.575, 0, 0.575, 0, -0.575, 0, -2.5134e-08, 9.03549, 3.04762, -5.20324)
+
+[node name="book" parent="SingleItemCollection/ItemCollection" instance=ExtResource("9_n1dri")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.05289, 3.09413, 6.91206)
+
+[node name="woodenbench" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -3.0573, 2.72387, -8.87566)
+
+[node name="woodenbench2" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -3.0573, 2.72387, -4.91406)
+
+[node name="woodenbench3" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 1.03346, 2.72387, -8.87566)
+
+[node name="woodenbench4" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 1.03346, 2.72387, -4.91406)
+
+[node name="woodenbench5" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -3.0573, 2.72387, 7.02514)
+
+[node name="woodenbench6" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -3.0573, 2.72387, 10.9867)
+
+[node name="woodenbench7" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 1.03346, 2.72387, 7.02514)
+
+[node name="woodenbench8" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 1.03346, 2.72387, 10.9867)
+
+[node name="woodenbench9" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 7.04006, 2.72387, 7.02514)
+
+[node name="woodenbench10" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 7.04006, 2.72387, 10.9867)
+
+[node name="woodenbench11" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 11.1308, 2.72387, 7.02514)
+
+[node name="woodenbench12" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 11.1308, 2.72387, 10.9867)
+
+[node name="woodenbench13" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 7.04006, 2.72387, -8.94924)
+
+[node name="woodenbench14" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 7.04006, 2.72387, -4.98765)
+
+[node name="woodenbench15" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 11.1308, 2.72387, -8.94924)
+
+[node name="woodenbench16" parent="SingleItemCollection/ItemCollection" instance=ExtResource("10_5erux")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 11.1308, 2.72387, -4.98765)
+
+[node name="SakuraTree" parent="SingleItemCollection/ItemCollection" instance=ExtResource("11_giu2f")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 8.91424, 4.5871, 0.597117)
+
+[node name="VoxelGI" type="VoxelGI" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 5.15689, 4.3315, 1.51227)
+size = Vector3(45, 12.355, 45)
+data = ExtResource("12_gp7w4")
