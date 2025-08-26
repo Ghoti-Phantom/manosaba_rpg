@@ -16,9 +16,10 @@ image = SubResource("Image_54xs3")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_54xs3"]
 resource_name = "材质.005"
 transparency = 2
-alpha_scissor_threshold = 0.5
+alpha_scissor_threshold = 0.911
 alpha_antialiasing_mode = 0
 cull_mode = 2
+disable_fog = true
 albedo_texture = SubResource("ImageTexture_rqh41")
 roughness = 0.5
 texture_filter = 2

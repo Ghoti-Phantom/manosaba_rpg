@@ -47,4 +47,5 @@ shadow_mesh = SubResource("ArrayMesh_4e83o")
 
 [node name="Emma" parent="." index="0"]
 layers = 524288
+gi_mode = 2
 mesh = SubResource("ArrayMesh_r3pub")

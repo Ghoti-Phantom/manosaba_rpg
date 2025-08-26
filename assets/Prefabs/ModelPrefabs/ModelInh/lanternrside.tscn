@@ -5,10 +5,13 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mhdgs"]
 resource_name = "材质.003"
-transparency = 4
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
 cull_mode = 2
 albedo_color = Color(9.5, 8.7, 6.35, 1)
 albedo_texture = ExtResource("2_e3sf5")
+albedo_texture_force_srgb = true
 roughness = 0.5
 texture_filter = 2
 

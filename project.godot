@@ -15,6 +15,10 @@ run/main_scene="uid://dtxlngwmngjey"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/vsync/vsync_mode=0
+
 [dotnet]
 
 project/assembly_name="manosaba_rpg_repo"
@@ -62,6 +66,7 @@ move_right={
 
 [layer_names]
 
+3d_render/layer_19="19"
 3d_render/layer_20="dynamic_obj"
 
 [rendering]
