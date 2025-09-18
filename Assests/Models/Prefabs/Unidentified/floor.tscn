@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=4 uid="uid://bqgqxovaypswf"]
+
+[ext_resource type="PackedScene" uid="uid://bs56hpgcdvfy" path="res://Assests/Models/Obj3D/Unidentified/floor.glb" id="1_egxum"]
+[ext_resource type="Texture2D" uid="uid://v6ivnkht8r7w" path="res://Assests/Art2/walitu/Library/walitu1.png" id="2_0vuna"]
+[ext_resource type="Script" uid="uid://xdf105xbcqpo" path="res://Assests/Scripts/test.gd" id="2_5pl8b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lj05c"]
+resource_name = "材质"
+transparency = 4
+blend_mode = 1
+cull_mode = 2
+albedo_texture = ExtResource("2_0vuna")
+roughness = 0.5
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5pl8b"]
+resource_name = "floor_立方体"
+lightmap_size_hint = Vector2i(86, 130)
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("tJAzP5ktGT/6gn4/8AN/P82xTD/Oos0+EncEP+RGLj/NsUw/mS0ZPxJ3BD/wA38/tJAzP86izT76gn4/5EYuP7SQMz+ZLRk/+oK+O8EPfDvNsUw/zqLNPtwR9z43cqM+zbFMP5ktGT/6gr47N3KjPrSQMz/Oos0+3BH3PsEPfDu0kDM/mS0ZP/qCfj/BD3w7zbFMP86izT4SdwQ/N3KjPs2xTD+ZLRk/EncEP8EPfDu0kDM/zqLNPvqCfj83cqM+tJAzP5ktGT8SdwQ/9EKvPs2xTD/Oos0++oJ+P4ZeKD/NsUw/mS0ZPxJ3BD+GXig/tJAzP86izT76gn4/9EKvPrSQMz+ZLRk/3BH3PvRCrz7NsUw/zqLNPvqCvjuGXig/zbFMP5ktGT/6gr479EKvPrSQMz/Oos0+3BH3PoZeKD/NMM09yXBJPvqCvjvkRi4/yxxLPgAAAADcEfc+8AN/P8scSz7JcEk+3BH3PuRGLj/NMM09AAAAAPqCvjvwA38/"),
+"format": 34359742519,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_lj05c"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AACAvwAAgL8AAIA/AACAvwAAgD8AAIC/AACAvwAAgD8AAIA/AACAvwAAgL8AAIC/AACAvwAAgL8AAIC/AACAPwAAgD8AAIC/AACAvwAAgD8AAIC/AACAPwAAgL8AAIC/AACAPwAAgL8AAIC/AACAPwAAgD8AAIA/AACAPwAAgD8AAIC/AACAPwAAgL8AAIA/AACAPwAAgL8AAIA/AACAvwAAgD8AAIA/AACAPwAAgD8AAIA/AACAvwAAgL8AAIA/AACAvwAAgL8AAIC/AACAPwAAgL8AAIA/AACAPwAAgL8AAIC/AACAvwAAgL8AAIA/AACAPwAAgD8AAIC/AACAvwAAgD8AAIA/AACAvwAAgD8AAIC/AACAPwAAgD8AAIA/AgAEgAGA/P8CAASAAYD8/wIABIABgPz/AgAEgAGA/P/+//7//3/+//7//v//f/7//v/+//9//v/+//7//3/+//r/AID+f/7/+v8AgP5//v/6/wCA/n/+//r/AID+f/7//3//fwCA/v//f/9/AID+//9//38AgP7//3//fwCA/v8AgAEA/v//vwCAAQD+//+/AIABAP7//78AgAEA/v//v/5//v8AAP6//n/+/wAA/r/+f/7/AAD+v/5//v8AAP6/")
+}]
+blend_shape_mode = 0
+
+[node name="floor" instance=ExtResource("1_egxum")]
+script = ExtResource("2_5pl8b")
+
+[node name="FloorCube" parent="." index="0"]
+mesh = SubResource("ArrayMesh_5pl8b")

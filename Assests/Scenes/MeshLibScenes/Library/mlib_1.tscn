@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxb6a7tm7d3go"]
+
+[ext_resource type="PackedScene" uid="uid://ci7bby5gn64rj" path="res://Assests/Models/Prefabs/Library/book_shelf.tscn" id="1_supu3"]
+[ext_resource type="PackedScene" uid="uid://dob4sjbsan1ld" path="res://Assests/Models/Prefabs/Library/floor.tscn" id="2_avu0h"]
+
+[node name="TempScene2" type="Node3D"]
+
+[node name="BookShelf" parent="." instance=ExtResource("1_supu3")]
+
+[node name="Floor" parent="." instance=ExtResource("2_avu0h")]

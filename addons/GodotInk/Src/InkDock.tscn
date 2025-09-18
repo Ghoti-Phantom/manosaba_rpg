@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bi0phc77n67u"]
 
-[ext_resource type="Script" path="res://addons/GodotInk/Src/InkDock.cs" id="1_c6vi7"]
+[ext_resource type="Script" uid="uid://c154bgwm2r5yt" path="res://Addons/GodotInk/Src/InkDock.cs" id="1_c6vi7"]
 
 [sub_resource type="Image" id="Image_s0a34"]
 data = {

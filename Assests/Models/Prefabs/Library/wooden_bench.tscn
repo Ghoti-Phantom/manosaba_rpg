@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=4 uid="uid://cok220jv4m8a"]
+
+[ext_resource type="PackedScene" uid="uid://cq6rv4iwts78f" path="res://Assests/Models/Obj2D/Library/wooden_bench.glb" id="1_yn7hw"]
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assests/Art2/walitu/Library/tiledassest.tres" id="2_leob8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6c1jq"]
+resource_name = "材质.005"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_leob8")
+roughness = 0.5
+backlight = Color(1, 1, 1, 1)
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3xm0e"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "材质.005",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_s28ss"]
+resource_name = "woodenbench_平面_002"
+lightmap_size_hint = Vector2i(42, 42)
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("5tJlP8U8RT7P83w/z/N8PwAAgD8AAAAAMQxDPDEMQzwAAIA/xTxFPs/zfD8xDEM85tJlPwAAAAAxDEM8z/N8Pw=="),
+"format": 34359742519,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_6c1jq"),
+"name": "woodenbench",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAIA/AACAPwAAAAAAAIC/AACAPwAAAAAAAIA/AACAvwAAAAAAAIC//3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3xm0e")
+
+[node name="woodenbench" instance=ExtResource("1_yn7hw")]
+
+[node name="WoodenbBench" parent="." index="0"]
+mesh = SubResource("ArrayMesh_s28ss")

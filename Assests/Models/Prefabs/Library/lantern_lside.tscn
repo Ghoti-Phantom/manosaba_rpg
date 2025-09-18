@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=4 uid="uid://bipfm868vlrb4"]
+
+[ext_resource type="PackedScene" uid="uid://xv8v0gpp7yf5" path="res://Assests/Models/Obj2D/Library/lantern_lside.glb" id="1_ops4b"]
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assests/Art2/walitu/Library/tiledassest.tres" id="2_puaa7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3qa2"]
+resource_name = "材质.003"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_color = Color(1, 0.9098039, 0.6509804, 1)
+albedo_texture = ExtResource("2_puaa7")
+albedo_texture_force_srgb = true
+roughness = 0.5
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3pukx"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "材质.003",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_evfl4"]
+resource_name = "lanternLside_平面_007"
+lightmap_size_hint = Vector2i(42, 42)
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("595mP5ktGT/P83w/z/N8PwAAgD/Oos0+MQxDPDEMQzwAAIA/mS0ZP8/zfD8xDEM8595mP86izT4xDEM8z/N8Pw=="),
+"format": 34359742519,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_k3qa2"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAIA/AACAPwAAAAAAAIC/AACAPwAAAAAAAIA/AACAvwAAAAAAAIC//3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3pukx")
+
+[node name="lanternLside" instance=ExtResource("1_ops4b")]
+
+[node name="LanternLside" parent="." index="0"]
+mesh = SubResource("ArrayMesh_evfl4")
