@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bs56hpgcdvfy" path="res://Assests/Models/Obj3D/Unidentified/floor.glb" id="1_egxum"]
 [ext_resource type="Texture2D" uid="uid://v6ivnkht8r7w" path="res://Assests/Art2/walitu/Library/walitu1.png" id="2_0vuna"]
-[ext_resource type="Script" uid="uid://xdf105xbcqpo" path="res://Assests/Scripts/test.gd" id="2_5pl8b"]
+[ext_resource type="Script" uid="uid://xdf105xbcqpo" path="res://TestFolder/Scripts/test.gd" id="2_5pl8b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lj05c"]
 resource_name = "材质"

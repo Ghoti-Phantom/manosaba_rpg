@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=4 uid="uid://bq4mi8ygwybda"]
+[gd_scene load_steps=6 format=4 uid="uid://bq4mi8ygwybda"]
 
-[ext_resource type="PackedScene" uid="uid://clns0c8ltm16w" path="res://Assests/Models/Obj3D/Library/desk.glb" id="1_xpmo0"]
 [ext_resource type="Texture2D" uid="uid://m7xolmwumb6n" path="res://Assests/Art2/walitu/Library/library_wall.png" id="2_bfxcg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vc4uq"]
@@ -26,34 +25,34 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_0ipa8"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_xpmo0"]
 resource_name = "desk_立方体_006"
+lightmap_size_hint = Vector2i(146, 134)
 _surfaces = [{
 "aabb": AABB(-3, -1, -1, 6, 1, 2),
-"attribute_data": PackedByteArray("////v+7uqar//6mq7u7/v////7/u7qmq//+pqu7u/7+7u6mq7u7/f+7uqaq7u/9/5tDy5rfjRNe34/Lm5tBE1+7u/7+7u6mq7u6pqru7/7/u7v+/u7upqu7uqaq7u/+/zMz/v8zMqard3f+/3d2pqszM/7/MzKmq3d3/v93dqapx3fLmcd1E1yvX8uYr10TX3d2pqt3d/3/MzKmqzMz/fw=="),
-"format": 34896613399,
+"attribute_data": PackedByteArray("AACAP8D/Pz+QH38/4VcjP+/ubj+rqSo/J01aP6QHqj4AAIA/q6kqPydNWj/hVyM/7+5uP8D/Pz+QH38/pAeqPs3MTD/A/z8/VlUVPxsTKT+8uzs/q6kqPwcOXD+sMVE/zcxMP6upKj9WVRU/rDFRP7y7Oz/A/z8/Bw5cPxsTKT/e3V0/wP8/P0g5nT4bEyk/3t1dP6upKj9IOZ0+rDFRP+/ubj/A/z8/P378PBsTKT/v7m4/q6kqPz9+/DysMVE/AACAP8D/Pz+QH38/jYl0O+/ubj+rqSo/J01aPzKRnj4AAIA/q6kqPydNWj+NiXQ77+5uP8D/Pz+QH38/MpGePs3MTD/A/z8/1FEOP+XsVj+8uzs/q6kqP4UKVT92C38/zcxMP6upKj/UUQ4/dgt/P7y7Oz/A/z8/hQpVP+XsVj/e3V0/wP8/P0Qyjz7l7FY/3t1dP6upKj9EMo8+dgt/P+/ubj/A/z8/OHBgO+XsVj/v7m4/q6kqPzhwYDt2C38/3XFdP+fyZj9EMo8+jYl0O+S3Yz/XRFc/OHBgOzKRnj7kt2M/5/JmPzhwYDuNiXQ73XFdP9dEVz9EMo8+MpGePtcrVz/n8mY/1FEOP42JdDvXK1c/10RXP9RRDj8ykZ4+0eZQP+fyZj+FClU/jYl0O9HmUD/XRFc/hQpVPzKRnj7e3V0/q6kqP0Qyjz6kB6o+7+5uPwD//z44cGA74VcjP+/ubj+rqSo/OHBgO6QHqj7e3V0/AP//PkQyjz7hVyM/zcxMP6upKj/UUQ4/pAeqPs3MTD8A//8+1FEOP+FXIz+8uzs/q6kqP4UKVT+kB6o+vLs7PwD//z6FClU/4VcjPw=="),
+"format": 34359742519,
 "index_count": 84,
-"index_data": PackedByteArray("AAABAAIAAAADAAEAGAAVABkAGAAXABUAGgAYABkAGgAZABsAFAAaABsAFAAbABYABAAFAAYABAAHAAUAHAARAB0AHAATABEAHgAcAB0AHgAdAB8AEAAeAB8AEAAfABIAIAANAA4AIAAhAA0AIgAhACAAIgAjACEADAAjACIADAAPACMAJAAJAAoAJAAlAAkAJgAlACQAJgAnACUACAAnACYACAALACcA"),
-"lods": [0.00047538086, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA")],
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAEAAYACAAGAAkACgAIAAkACgAJAAsADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAQABIAFAASABUAFgAUABUAFgAVABcAGAAZABoAGAAbABkAHAAbABgAHAAdABsAHgAdABwAHgAfAB0AIAAhACIAIAAjACEAJAAjACAAJAAlACMAJgAlACQAJgAnACUA"),
 "material": SubResource("StandardMaterial3D_vc4uq"),
-"name": "材质.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 40,
-"vertex_data": PackedByteArray("AAAAAP///78AAP//AAD/vwAA//////+/AAAAAAAA/7///wAAAAD/v/////////+//////wAA/7///wAA////v/////8AAP//AAD///////8AAP//AAD/////////////AAAAAAAA/7///wAA////v///AAAAAP+/AAAAAP///7///wAA//8AgAAA/////wCA////////AIAAAAAA//8AgAAAAAAAAP///////wAA//8AAP//AAD/////AAAAAP//qqoAAAAA//+qqv//AAD//1VVAAAAAP//VVX//wAA//9VVQAA//8AgFVV/////wCAqqoAAP//AICqqv////8AgKqqAAAAAP+/qqoAAP///79VVQAAAAD/v1VVAAD///+/VVX//wAA//9VVf///////6qq//8AAP//qqr/////////f////3////9/////f////38AAP9/AAD/fwAA/38AAP9//7//f/+//3//v/9//78AAP9/AAD/fwAA/38AAP9//3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3///wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
+"vertex_data": PackedByteArray("AABAwAAAgL8AAIA/AABAwAAAAAAAAIC/AABAwAAAAAAAAIA/AABAwAAAgL8AAIC/AACAPwAAgL8AAIC/AABAQAAAAAAAAIC/AACAPwAAAAAAAIC/AABAQAAAgL8AAIC/AACAvwAAgL8AAIC/AACAvwAAAAAAAIC/AABAwAAAgL8AAIC/AABAwAAAAAAAAIC/AABAQAAAgL8AAIC/AABAQAAAAAAAAIA/AABAQAAAAAAAAIC/AABAQAAAgL8AAIA/AACAvwAAgL8AAIA/AABAwAAAAAAAAIA/AACAvwAAAAAAAIA/AABAwAAAgL8AAIA/AACAPwAAgL8AAIA/AACAPwAAAAAAAIA/AABAQAAAgL8AAIA/AABAQAAAAAAAAIA/AACAPwAAgL8AAIC/AABAQAAAgL8AAIA/AABAQAAAgL8AAIC/AACAPwAAgL8AAIA/AACAvwAAgL8AAIC/AACAvwAAgL8AAIA/AABAwAAAgL8AAIC/AABAwAAAgL8AAIA/AACAvwAAAAAAAIC/AABAwAAAAAAAAIA/AABAwAAAAAAAAIC/AACAvwAAAAAAAIA/AACAPwAAAAAAAIC/AACAPwAAAAAAAIA/AABAQAAAAAAAAIC/AABAQAAAAAAAAIA/AQD/fwCA/78BAP9/AID/vwEA/38AgP+/AQD/fwCA/7/+/wAAAAD/v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/v/7/AAAAAP+//v8AAAAA/7/+/wAAAAD/v/7/AAAAAP+//f8AgP7//v/9/wCA/v/+//3/AID+//7//f8AgP7//v/9f/9//f//v/1//3/9//+//X//f/3//7/9f/9//f//v/1//3/9//+//X//f/3//7/9f/9//f//v/1//3/9//+/AIABAP7//78AgAEA/v//vwCAAQD+//+/AIABAP7//78AgAEA/v//vwCAAQD+//+/AIABAP7//78AgAEA/v//v/5//v8AAP6//n/+/wAA/r/+f/7/AAD+v/5//v8AAP6//n/+/wAA/r/+f/7/AAD+v/5//v8AAP6//n/+/wAA/r8=")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_weiy0")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5eg36"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_40wpd"]
 data = PackedVector3Array(-3, -1, 1, -3, 0, -1, -3, 0, 1, -3, -1, 1, -3, -1, -1, -3, 0, -1, 1, -1, -1, 3, 0, -1, 1, 0, -1, 1, -1, -1, 3, -1, -1, 3, 0, -1, -1, -1, -1, 1, -1, -1, 1, 0, -1, -1, -1, -1, 1, 0, -1, -1, 0, -1, -3, -1, -1, -1, -1, -1, -1, 0, -1, -3, -1, -1, -1, 0, -1, -3, 0, -1, 3, -1, -1, 3, 0, 1, 3, 0, -1, 3, -1, -1, 3, -1, 1, 3, 0, 1, -1, -1, 1, -3, 0, 1, -1, 0, 1, -1, -1, 1, -3, -1, 1, -3, 0, 1, 1, -1, 1, -1, -1, 1, -1, 0, 1, 1, -1, 1, -1, 0, 1, 1, 0, 1, 3, -1, 1, 1, -1, 1, 1, 0, 1, 3, -1, 1, 1, 0, 1, 3, 0, 1, 1, -1, -1, 3, -1, 1, 3, -1, -1, 1, -1, -1, 1, -1, 1, 3, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, -3, -1, -1, -1, -1, 1, -1, -1, -1, -3, -1, -1, -3, -1, 1, -1, -1, 1, -1, 0, -1, -3, 0, 1, -3, 0, -1, -1, 0, -1, -1, 0, 1, -3, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1, 1, 0, 1, -1, 0, 1, 3, 0, -1, 1, 0, 1, 1, 0, -1, 3, 0, -1, 3, 0, 1, 1, 0, 1)
 
-[node name="desk" instance=ExtResource("1_xpmo0")]
+[node name="Desk" type="Node3D"]
 
-[node name="Desk" parent="." index="0"]
-mesh = SubResource("ArrayMesh_0ipa8")
+[node name="MeshDesk" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_xpmo0")
+skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
-shape = SubResource("ConcavePolygonShape3D_5eg36")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_40wpd")

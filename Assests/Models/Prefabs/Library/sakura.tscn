@@ -3,3 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c7l1q0wh878xh" path="res://Assests/Models/Obj2D/Library/sakura.glb" id="1_1chow"]
 
 [node name="Sakura2" instance=ExtResource("1_1chow")]
+
+[node name="Sakura" parent="." index="0"]
+layers = 3
+gi_mode = 2

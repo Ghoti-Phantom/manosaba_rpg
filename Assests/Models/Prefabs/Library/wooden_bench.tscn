@@ -1,12 +1,10 @@
 [gd_scene load_steps=6 format=4 uid="uid://cok220jv4m8a"]
 
-[ext_resource type="PackedScene" uid="uid://cq6rv4iwts78f" path="res://Assests/Models/Obj2D/Library/wooden_bench.glb" id="1_yn7hw"]
-[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assests/Art2/walitu/Library/tiledassest.tres" id="2_leob8"]
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assests/Art2/walitu/Library/tiled_assest.tres" id="2_leob8"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6c1jq"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oqq81"]
 resource_name = "材质.005"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("2_leob8")
 roughness = 0.5
 backlight = Color(1, 1, 1, 1)
@@ -26,7 +24,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_s28ss"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_rf4nr"]
 resource_name = "woodenbench_平面_002"
 lightmap_size_hint = Vector2i(42, 42)
 _surfaces = [{
@@ -35,7 +33,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 6,
 "index_data": PackedByteArray("AAABAAIAAAADAAEA"),
-"material": SubResource("StandardMaterial3D_6c1jq"),
+"material": SubResource("StandardMaterial3D_oqq81"),
 "name": "woodenbench",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -45,7 +43,17 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3xm0e")
 
-[node name="woodenbench" instance=ExtResource("1_yn7hw")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_oqq81"]
+size = Vector3(1, 0.05091858, 1.2645264)
 
-[node name="WoodenbBench" parent="." index="0"]
-mesh = SubResource("ArrayMesh_s28ss")
+[node name="Woodenbench" type="Node3D"]
+
+[node name="MeshWoodenbBench" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_rf4nr")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.030189514, 0.13226318)
+shape = SubResource("BoxShape3D_oqq81")

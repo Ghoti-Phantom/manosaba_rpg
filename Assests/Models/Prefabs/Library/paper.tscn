@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=4 uid="uid://bd0aik3hs31n3"]
+[gd_scene load_steps=5 format=4 uid="uid://bd0aik3hs31n3"]
 
-[ext_resource type="PackedScene" uid="uid://8xjvfhdsvjas" path="res://Assests/Models/Obj2D/Library/paper.glb" id="1_xuqd2"]
-[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assests/Art2/walitu/Library/tiledassest.tres" id="2_8amw4"]
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assests/Art2/walitu/Library/tiled_assest.tres" id="2_8amw4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8rkk"]
 resource_name = "材质.003"
@@ -43,8 +42,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fciy8")
 
-[node name="paper" instance=ExtResource("1_xuqd2")]
+[node name="Paper" type="Node3D"]
 
-[node name="纸条" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="MeshPaper" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_jqe8x")
+skeleton = NodePath("")

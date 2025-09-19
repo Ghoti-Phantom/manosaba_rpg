@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=4 uid="uid://cbwmy3bs5f1iq"]
 
 [ext_resource type="PackedScene" uid="uid://ncndd6d72gj5" path="res://Assests/Models/Obj3D/Unidentified/desk_test.glb" id="1_v5ewl"]
-[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assests/Art2/walitu/Library/tiledassest.tres" id="2_nk6jt"]
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assests/Art2/walitu/Library/tiled_assest.tres" id="2_nk6jt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kuaqe"]
 resource_name = "材质.001"

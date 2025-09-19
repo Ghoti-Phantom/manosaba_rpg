@@ -1,12 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://wmwphx1n78u8"]
+[gd_scene load_steps=5 format=4 uid="uid://wmwphx1n78u8"]
 
-[ext_resource type="PackedScene" uid="uid://c7131ks7fuje6" path="res://Assests/Models/Obj2D/Library/book.glb" id="1_5vd7r"]
-[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assests/Art2/walitu/Library/tiledassest.tres" id="2_25y7n"]
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assests/Art2/walitu/Library/tiled_assest.tres" id="2_25y7n"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gmb4d"]
 resource_name = "材质.004"
 transparency = 4
-cull_mode = 2
 albedo_texture = ExtResource("2_25y7n")
 roughness = 0.5
 texture_filter = 2
@@ -44,8 +42,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6liea")
 
-[node name="book" instance=ExtResource("1_5vd7r")]
+[node name="Book" type="Node3D"]
 
-[node name="Book" parent="." index="0"]
+[node name="MeshBook" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0411377, -0.0214934, 0.019526)
 mesh = SubResource("ArrayMesh_tpyet")
+skeleton = NodePath("")

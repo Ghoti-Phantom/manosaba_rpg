@@ -1,0 +1,37 @@
+[gd_scene load_steps=12 format=3 uid="uid://dhemjl4vbbh7u"]
+
+[ext_resource type="PackedScene" uid="uid://mndax41egxo1" path="res://Assests/Models/Prefabs/Library/wall_12.tscn" id="1_gvtcj"]
+[ext_resource type="PackedScene" uid="uid://ct7nw7ogxbsjj" path="res://Assests/Models/Prefabs/Library/wall_32.tscn" id="2_p821e"]
+[ext_resource type="PackedScene" uid="uid://b3faw7oiu4of2" path="res://Assests/Models/Prefabs/Library/wall_45.tscn" id="3_vqht0"]
+[ext_resource type="PackedScene" uid="uid://lp56gtv40ljb" path="res://Assests/Models/Prefabs/Library/wall_65.tscn" id="4_k80ky"]
+[ext_resource type="PackedScene" uid="uid://djjf04t64q8w1" path="res://Assests/Models/Prefabs/Library/wall_78.tscn" id="5_cd2cj"]
+[ext_resource type="PackedScene" uid="uid://mcnfbmgyiakp" path="res://Assests/Models/Prefabs/Library/wall_98.tscn" id="6_1e27g"]
+[ext_resource type="PackedScene" uid="uid://vdciuaelwyry" path="res://Assests/Models/Prefabs/Library/wall_side.tscn" id="7_ijqav"]
+[ext_resource type="PackedScene" uid="uid://xeerwbk34aqy" path="res://Assests/Models/Prefabs/Library/wall_window.tscn" id="8_w8xr4"]
+[ext_resource type="PackedScene" uid="uid://0pxtloi56rxj" path="res://Assests/Models/Prefabs/Library/wall_window_147.tscn" id="9_he51s"]
+[ext_resource type="PackedScene" uid="uid://20hhove5oxjw" path="res://Assests/Models/Prefabs/Library/wall_window_369.tscn" id="10_hfb4s"]
+[ext_resource type="PackedScene" uid="uid://b6u4vderciyyb" path="res://Assests/Models/Prefabs/Library/window.tscn" id="11_jka1f"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Wall12" parent="." instance=ExtResource("1_gvtcj")]
+
+[node name="Wall32" parent="." instance=ExtResource("2_p821e")]
+
+[node name="Wall45" parent="." instance=ExtResource("3_vqht0")]
+
+[node name="Wall65" parent="." instance=ExtResource("4_k80ky")]
+
+[node name="Wall78" parent="." instance=ExtResource("5_cd2cj")]
+
+[node name="Wall98" parent="." instance=ExtResource("6_1e27g")]
+
+[node name="WallSide" parent="." instance=ExtResource("7_ijqav")]
+
+[node name="WallWindow" parent="." instance=ExtResource("8_w8xr4")]
+
+[node name="WallWindow147" parent="." instance=ExtResource("9_he51s")]
+
+[node name="WallWindow369" parent="." instance=ExtResource("10_hfb4s")]
+
+[node name="Window" parent="." instance=ExtResource("11_jka1f")]

@@ -30,6 +30,13 @@ project/assembly_name="manosaba_rpg_repo"
 
 enabled=PackedStringArray("res://addons/YATI/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://Assests/": "red",
+"res://TestFolder/": "green"
+}
+
 [filesystem]
 
 import/enabled=true
@@ -65,7 +72,11 @@ move_right={
 
 [layer_names]
 
-3d_render/layer_19="19"
+3d_render/layer_1="normal"
+3d_render/layer_2="light_mask1"
+3d_render/layer_3="light_mask2"
+3d_render/layer_4="light_mask3"
+3d_render/layer_19="character"
 3d_render/layer_20="dynamic_obj"
 
 [rendering]

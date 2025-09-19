@@ -1,14 +1,12 @@
-[gd_scene load_steps=6 format=4 uid="uid://d12ihk8j40fj4"]
+[gd_scene load_steps=5 format=4 uid="uid://d12ihk8j40fj4"]
 
-[ext_resource type="PackedScene" uid="uid://dqhgejcladxr7" path="res://Assests/Models/Obj2D/Library/lantern_rside.glb" id="1_0cd88"]
-[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assests/Art2/walitu/Library/tiledassest.tres" id="2_e3sf5"]
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assests/Art2/walitu/Library/tiled_assest.tres" id="2_e3sf5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mhdgs"]
 resource_name = "材质.003"
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-cull_mode = 2
 albedo_color = Color(1, 0.9098039, 0.6509804, 1)
 albedo_texture = ExtResource("2_e3sf5")
 albedo_texture_force_srgb = true
@@ -47,7 +45,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xdedl")
 
-[node name="lanternRside" instance=ExtResource("1_0cd88")]
+[node name="LanternRSide" type="Node3D"]
 
-[node name="LanternRside" parent="." index="0"]
+[node name="MeshLanternRSide" type="MeshInstance3D" parent="."]
+cast_shadow = 0
 mesh = SubResource("ArrayMesh_yy1ll")
+skeleton = NodePath("")
