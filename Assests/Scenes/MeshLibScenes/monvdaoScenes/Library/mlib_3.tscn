@@ -4,9 +4,4 @@
 
 [node name="Mlib3" type="Node3D"]
 
-[node name="floor2" parent="." instance=ExtResource("1_28qvv")]
-
-[node name="FloorCube2" parent="floor2" index="0"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-
-[editable path="floor2"]
+[node name="Floor" parent="." instance=ExtResource("1_28qvv")]

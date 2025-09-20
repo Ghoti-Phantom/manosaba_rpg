@@ -12,7 +12,7 @@ texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_3tuwa"]
 _surfaces = [{
-"aabb": AABB(-1, -3, -1, 2, 6, 2),
+"aabb": AABB(-1, 0, -1, 2, 7.9979997, 2),
 "format": 34896613377,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
@@ -26,10 +26,10 @@ blend_shape_mode = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_x3i2b"]
 resource_name = "wall_window_147_立方体_017"
-lightmap_size_hint = Vector2i(174, 170)
+lightmap_size_hint = Vector2i(174, 206)
 _surfaces = [{
-"aabb": AABB(-1, -3, -1, 2, 6, 2),
-"attribute_data": PackedByteArray("t9q2PpvxGj/IpDg/Pz9/P5ttGz+25LU+sdzTPIKBQT+bbRs/m/EaP7Hc0zw/P38/t9q2PrbktT7IpDg/goFBP8D+vz7A/z8/ZFI8O8HAQDug/x8/AP//Pto6dD739jY/oP8fP8D/Pz9kUjw79/Y2P8D+vz4A//8+2jp0PsHAQDvA/r8+vaA8P0rxgj739jY/oP8fP/lC+T4Slvs+wcBAO6D/Hz+9oDw/SvGCPsHAQDvA/r8++UL5PhKW+z739jY/7rVtP/lCeT/3NAI/2djYPJJIkj3YgNc8W4c+P/38PD/utW0/2IDXPPc0Aj/9/Dw/kkiSPflCeT9bhz4/2djYPMD+vz6sySs/rkN/P9nY2Dyg/x8/2JLXPkrxQj8JCYk+oP8fP6zJKz9K8UI/2djYPMD+vz7Yktc+rkN/PwkJiT6utq0+o10jP0rxQj9CQsI+l9oWP8e6xj6uQ38/394eP5faFj+jXSM/rkN/P0JCwj6utq0+x7rGPkrxQj/f3h4/"),
+"aabb": AABB(-1, 0, -1, 2, 7.9979997, 2),
+"attribute_data": PackedByteArray("t9q2PpvxGj+uQ38/9LJIP5ttGz+25LU+SvFCP2YRHzubbRs/m/EaP65Dfz9mER87t9q2PrbktT5K8UI/9LJIP8D+vz7A/z8/ZFI8O2YRHzug/x8/AP//Pto6dD70skg/oP8fP8D/Pz9kUjw79LJIP8D+vz4A//8+2jp0PmYRHzvA/r8+vaA8P0rxgj70skg/oP8fP/lC+T4Slvs+ZhEfO6D/Hz+9oDw/SvGCPmYRHzvA/r8++UL5PhKW+z70skg/7rVtP/lCeT/3NAI/ZhEfO5JIkj3YgNc8W4c+P/SySD/utW0/2IDXPPc0Aj/0skg/kkiSPflCeT9bhz4/ZhEfO8D+vz6sySs/k+KFPlxtTD+g/x8/2JLXPrHc0zzvYH8/oP8fP6zJKz+x3NM8XG1MP8D+vz7Yktc+k+KFPu9gfz+utq0+o10jP9ehHz9cbUw/l9oWP8e6xj479Fs/72B/P5faFj+jXSM/O/RbP1xtTD+utq0+x7rGPtehHz/vYH8/"),
 "format": 34359742519,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
@@ -37,13 +37,13 @@ _surfaces = [{
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
-"vertex_data": PackedByteArray("AACAvwAAQMAAAIA/AACAvwAAQEAAAIC/AACAvwAAQEAAAIA/AACAvwAAQMAAAIC/AACAvwAAQMAAAIC/AACAPwAAQEAAAIC/AACAvwAAQEAAAIC/AACAPwAAQMAAAIC/AACAPwAAQMAAAIC/AACAPwAAQEAAAIA/AACAPwAAQEAAAIC/AACAPwAAQMAAAIA/AACAPwAAQMAAAIA/AACAvwAAQEAAAIA/AACAPwAAQEAAAIA/AACAvwAAQMAAAIA/AACAvwAAQMAAAIC/AACAPwAAQMAAAIA/AACAPwAAQMAAAIC/AACAvwAAQMAAAIA/AACAPwAAQEAAAIC/AACAvwAAQEAAAIA/AACAvwAAQEAAAIC/AACAPwAAQEAAAIA/AgAEgAGA/P8CAASAAYD8/wIABIABgPz/AgAEgAGA/P/+//7//3/+//7//v//f/7//v/+//9//v/+//7//3/+//r/AID+f/7/+v8AgP5//v/6/wCA/n/+//r/AID+f/7//X//f/3//7/9f/9//f//v/1//3/9//+//X//f/3//78AgAEA/v//vwCAAQD+//+/AIABAP7//78AgAEA/v//v/5//v8AAP6//n/+/wAA/r/+f/7/AAD+v/5//v8AAP6/")
+"vertex_data": PackedByteArray("AACAvwAAAAAAAIA/AACAv53v/0AAAIC/AACAv53v/0AAAIA/AACAvwAAAAAAAIC/AACAvwAAAAAAAIC/AACAP53v/0AAAIC/AACAv53v/0AAAIC/AACAPwAAAAAAAIC/AACAPwAAAAAAAIC/AACAP53v/0AAAIA/AACAP53v/0AAAIC/AACAPwAAAAAAAIA/AACAPwAAAAAAAIA/AACAv53v/0AAAIA/AACAP53v/0AAAIA/AACAvwAAAAAAAIA/AACAvwAAAAAAAIC/AACAPwAAAAAAAIA/AACAPwAAAAAAAIC/AACAvwAAAAAAAIA/AACAP53v/0AAAIC/AACAv53v/0AAAIA/AACAv53v/0AAAIC/AACAP53v/0AAAIA/AgAEgAGA/P8CAASAAYD8/wIABIABgPz/AgAEgAGA/P/+//7//3/+//7//v//f/7//v/+//9//v/+//7//3/+//r/AID+f/7/+v8AgP5//v/6/wCA/n/+//r/AID+f/7//X//f/3//7/9f/9//f//v/1//3/9//+//X//f/3//78AgAEA/v//vwCAAQD+//+/AIABAP7//78AgAEA/v//v/5//v8AAP6//n/+/wAA/r/+f/7/AAD+v/5//v8AAP6/")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_3tuwa")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_e8pj4"]
-data = PackedVector3Array(-1, -3, 1, -1, 3, -1, -1, 3, 1, -1, -3, 1, -1, -3, -1, -1, 3, -1, -1, -3, -1, 1, 3, -1, -1, 3, -1, -1, -3, -1, 1, -3, -1, 1, 3, -1, 1, -3, -1, 1, 3, 1, 1, 3, -1, 1, -3, -1, 1, -3, 1, 1, 3, 1, 1, -3, 1, -1, 3, 1, 1, 3, 1, 1, -3, 1, -1, -3, 1, -1, 3, 1, -1, -3, -1, 1, -3, 1, 1, -3, -1, -1, -3, -1, -1, -3, 1, 1, -3, 1, 1, 3, -1, -1, 3, 1, -1, 3, -1, 1, 3, -1, 1, 3, 1, -1, 3, 1)
+data = PackedVector3Array(-1, 0, 1, -1, 7.9979997, -1, -1, 7.9979997, 1, -1, 0, 1, -1, 0, -1, -1, 7.9979997, -1, -1, 0, -1, 1, 7.9979997, -1, -1, 7.9979997, -1, -1, 0, -1, 1, 0, -1, 1, 7.9979997, -1, 1, 0, -1, 1, 7.9979997, 1, 1, 7.9979997, -1, 1, 0, -1, 1, 0, 1, 1, 7.9979997, 1, 1, 0, 1, -1, 7.9979997, 1, 1, 7.9979997, 1, 1, 0, 1, -1, 0, 1, -1, 7.9979997, 1, -1, 0, -1, 1, 0, 1, 1, 0, -1, -1, 0, -1, -1, 0, 1, 1, 0, 1, 1, 7.9979997, -1, -1, 7.9979997, 1, -1, 7.9979997, -1, 1, 7.9979997, -1, 1, 7.9979997, 1, -1, 7.9979997, 1)
 
 [node name="WallWindow147" type="Node3D"]
 

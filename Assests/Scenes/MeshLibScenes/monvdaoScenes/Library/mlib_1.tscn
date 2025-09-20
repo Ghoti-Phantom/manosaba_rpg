@@ -1,13 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxb6a7tm7d3go"]
+[gd_scene load_steps=3 format=3 uid="uid://dxb6a7tm7d3go"]
 
-[ext_resource type="PackedScene" uid="uid://ci7bby5gn64rj" path="res://Assests/Models/Prefabs/Library/book_shelf.tscn" id="1_ip7yl"]
-[ext_resource type="PackedScene" uid="uid://dob4sjbsan1ld" path="res://Assests/Models/Prefabs/Library/floor.tscn" id="2_ou4ff"]
-[ext_resource type="PackedScene" uid="uid://bq4mi8ygwybda" path="res://Assests/Models/Prefabs/Library/desk.tscn" id="3_ou4ff"]
+[ext_resource type="PackedScene" uid="uid://duk6de1yxplt2" path="res://Assests/Models/Prefabs/Library/bookshelf.tscn" id="1_ip7yl"]
+[ext_resource type="PackedScene" uid="uid://bq4mi8ygwybda" path="res://Assests/Models/Prefabs/Library/desk.tscn" id="2_ou4ff"]
 
-[node name="TempScene2" type="Node3D"]
+[node name="Mlib1" type="Node3D"]
 
 [node name="BookShelf" parent="." instance=ExtResource("1_ip7yl")]
 
-[node name="Floor" parent="." instance=ExtResource("2_ou4ff")]
-
-[node name="Desk" parent="." instance=ExtResource("3_ou4ff")]
+[node name="Desk" parent="." instance=ExtResource("2_ou4ff")]

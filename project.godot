@@ -11,14 +11,15 @@ config_version=5
 [application]
 
 config/name="manosaba_rpg"
-run/main_scene="uid://dtxlngwmngjey"
+run/main_scene="uid://c4clqqbcth8pe"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="viewport"
-window/vsync/vsync_mode=0
 window/quality/screen_space_aa=0
 window/quality/msaa_3d=0
 

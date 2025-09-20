@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv50djlio8b"]
+
+[ext_resource type="PackedScene" uid="uid://bqgqxovaypswf" path="res://Assests/Models/Prefabs/Unidentified/floor.tscn" id="1_6eiq8"]
+
+[node name="MlibA" type="Node3D"]
+
+[node name="floor" parent="." instance=ExtResource("1_6eiq8")]

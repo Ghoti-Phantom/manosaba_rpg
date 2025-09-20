@@ -52,6 +52,7 @@ shadow_mesh = SubResource("ArrayMesh_g3n41")
 [node name="LanternFside" type="Node3D"]
 
 [node name="MeshLanternFSide" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0010904074, -0.0018883944, 0.0031045675)
 cast_shadow = 0
 mesh = SubResource("ArrayMesh_33ys1")
 skeleton = NodePath("")
