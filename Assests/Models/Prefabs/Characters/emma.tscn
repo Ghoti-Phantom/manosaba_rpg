@@ -94,22 +94,22 @@ switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_27c65"]
-switch_mode = 2
 advance_mode = 2
+advance_expression = "req_move == true"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4xpt1"]
-switch_mode = 2
-advance_mode = 0
+advance_mode = 2
+advance_expression = "req_idle == true"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_x6afp"]
 states/End/position = Vector2(944, 100)
-states/IdleState/node = SubResource("AnimationNodeBlendSpace2D_s276n")
-states/IdleState/position = Vector2(397, 100)
-states/MoveState/node = SubResource("AnimationNodeBlendSpace2D_x6afp")
-states/MoveState/position = Vector2(635, 100)
+states/Idle/node = SubResource("AnimationNodeBlendSpace2D_s276n")
+states/Idle/position = Vector2(380, 100)
+states/Move/node = SubResource("AnimationNodeBlendSpace2D_x6afp")
+states/Move/position = Vector2(603, 100)
 states/Start/position = Vector2(220, 100)
-transitions = ["Start", "IdleState", SubResource("AnimationNodeStateMachineTransition_4bx5i"), "IdleState", "MoveState", SubResource("AnimationNodeStateMachineTransition_27c65"), "MoveState", "IdleState", SubResource("AnimationNodeStateMachineTransition_4xpt1")]
-graph_offset = Vector2(150, -9)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_4bx5i"), "Idle", "Move", SubResource("AnimationNodeStateMachineTransition_27c65"), "Move", "Idle", SubResource("AnimationNodeStateMachineTransition_4xpt1")]
+graph_offset = Vector2(75, -58.22222)
 
 [sub_resource type="Animation" id="Animation_ai6bt"]
 resource_name = "RESET"
@@ -138,6 +138,7 @@ step = 0.016666668
 
 [sub_resource type="Animation" id="Animation_2k5nb"]
 resource_name = "idle_back"
+loop_mode = 1
 step = 0.016666668
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -166,11 +167,12 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector3(0, 0.75, 0)]
+"values": [Vector3(0.25, 0.75, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_4bx5i"]
 resource_name = "idle_left"
+loop_mode = 1
 step = 0.016666668
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -182,11 +184,12 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector3(0, 0.25, 0)]
+"values": [Vector3(0.25, 0.25, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_27c65"]
 resource_name = "idle_right"
+loop_mode = 1
 step = 0.016666668
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -203,6 +206,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_s276n"]
 resource_name = "move_back"
+loop_mode = 1
 step = 0.016666668
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -219,6 +223,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_lyaof"]
 resource_name = "move_forward"
+loop_mode = 1
 step = 0.016666668
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -235,6 +240,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_x6afp"]
 resource_name = "move_left"
+loop_mode = 1
 step = 0.016666668
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -251,6 +257,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_c6gfk"]
 resource_name = "move_right"
+loop_mode = 1
 step = 0.016666668
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -288,9 +295,10 @@ skeleton = NodePath("")
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_x6afp")
+advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
-parameters/IdleState/blend_position = Vector2(0.5237092, 0.007299185)
-parameters/MoveState/blend_position = Vector2(0.011591196, 0.88807786)
+parameters/Idle/blend_position = Vector2(-0.01028806, 0.7040359)
+parameters/Move/blend_position = Vector2(0.010288119, 0.4977579)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

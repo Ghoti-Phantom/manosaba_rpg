@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Game Projects\\Godot Projects\\manosaba_rpg\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Game Projects\\Godot Projects\\manosaba_rpg\\Addons\\GodotInk\\GodotInk.props||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Addons\\GodotInk\\GodotInk.props||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{7E176E74-5B51-4527-B92C-EA3FF6C87F86}|manosaba_rpg_repo.csproj|d:\\game projects\\godot projects\\manosaba_rpg\\addons\\godotink\\src\\inklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E176E74-5B51-4527-B92C-EA3FF6C87F86}|manosaba_rpg_repo.csproj|solutionrelative:addons\\godotink\\src\\inklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E176E74-5B51-4527-B92C-EA3FF6C87F86}|manosaba_rpg_repo.csproj|d:\\game projects\\godot projects\\manosaba_rpg\\manosaba_rpg_repo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{7E176E74-5B51-4527-B92C-EA3FF6C87F86}|manosaba_rpg_repo.csproj|solutionrelative:manosaba_rpg_repo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Game Projects\\Godot Projects\\manosaba_rpg\\Addons\\GodotInk\\GodotInk.props||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Addons\\GodotInk\\GodotInk.props||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,6 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "InkList.cs",
+              "DocumentMoniker": "D:\\Game Projects\\Godot Projects\\manosaba_rpg\\Addons\\GodotInk\\Src\\InkList.cs",
+              "RelativeDocumentMoniker": "Addons\\GodotInk\\Src\\InkList.cs",
+              "ToolTip": "D:\\Game Projects\\Godot Projects\\manosaba_rpg\\Addons\\GodotInk\\Src\\InkList.cs",
+              "RelativeToolTip": "Addons\\GodotInk\\Src\\InkList.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAywAkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T03:23:17.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "GodotInk.props",
               "DocumentMoniker": "D:\\Game Projects\\Godot Projects\\manosaba_rpg\\Addons\\GodotInk\\GodotInk.props",
               "RelativeDocumentMoniker": "Addons\\GodotInk\\GodotInk.props",
@@ -36,10 +53,10 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "manosaba_rpg_repo",
-              "DocumentMoniker": "D:\\Game Projects\\Godot Projects\\manosaba_rpg\\manosaba_rpg_repo.csproj",
+              "Title": "manosaba_rpg_repo.csproj",
+              "DocumentMoniker": "D:\\GAME PROJECTS\\GODOT PROJECTS\\MANOSABA_RPG\\manosaba_rpg_repo.csproj",
               "RelativeDocumentMoniker": "manosaba_rpg_repo.csproj",
-              "ToolTip": "D:\\Game Projects\\Godot Projects\\manosaba_rpg\\manosaba_rpg_repo.csproj",
+              "ToolTip": "D:\\GAME PROJECTS\\GODOT PROJECTS\\MANOSABA_RPG\\manosaba_rpg_repo.csproj",
               "RelativeToolTip": "manosaba_rpg_repo.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",

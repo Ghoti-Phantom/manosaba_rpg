@@ -1,7 +1,7 @@
 [gd_scene load_steps=35 format=4 uid="uid://dtxlngwmngjey"]
 
 [ext_resource type="Texture2D" uid="uid://dqs07qi0vbupm" path="res://TestFolder/SkyBoxes/rogland_clear_night_4k.exr" id="1_gmsp5"]
-[ext_resource type="Script" uid="uid://bwgpx1di4kgc4" path="res://Assests/Scripts/player_control.gd" id="2_yn6ow"]
+[ext_resource type="Script" uid="uid://bwgpx1di4kgc4" path="res://Assests/Scripts/Common/player_control.gd" id="2_yn6ow"]
 [ext_resource type="PackedScene" uid="uid://85ldtbk3yaap" path="res://Assests/Models/Prefabs/Characters/emma_test.tscn" id="3_7tx4v"]
 [ext_resource type="MeshLibrary" uid="uid://lhm88gl2w2bd" path="res://TestFolder/MeshLibTest/mesh_lib_test_fix7.tres" id="4_yn6ow"]
 [ext_resource type="PackedScene" uid="uid://w5ipx7libxei" path="res://Assests/Models/Prefabs/Library/lantern_fside.tscn" id="5_gmsp5"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://k7at2ijskxbl" path="res://Assests/Art2/walitu/Library/library_window.png" id="7_7r4s8"]
 [ext_resource type="PackedScene" uid="uid://bd0aik3hs31n3" path="res://Assests/Models/Prefabs/Library/paper.tscn" id="8_c6mtn"]
 [ext_resource type="PackedScene" uid="uid://wmwphx1n78u8" path="res://Assests/Models/Prefabs/Library/book.tscn" id="9_l22vq"]
-[ext_resource type="PackedScene" uid="uid://cok220jv4m8a" path="res://Assests/Models/Prefabs/Library/wooden_bench.tscn" id="10_obi03"]
+[ext_resource type="PackedScene" uid="uid://b2v01f0k8f0po" path="res://Assests/Models/Prefabs/Library/wooden_bench.tscn" id="10_obi03"]
 [ext_resource type="PackedScene" uid="uid://dhp8l6qfbgmjb" path="res://Assests/Models/Prefabs/Library/sakura_with_collision.tscn" id="11_g35ov"]
 [ext_resource type="Shader" uid="uid://b7oup7w8wg7d4" path="res://TestFolder/ShaderTest/library_night_test.gdshader" id="16_7r4s8"]
 [ext_resource type="Texture2D" uid="uid://dmk00jacqmv25" path="res://icon.svg" id="17_04p1q"]

@@ -1,0 +1,14 @@
+extends Node
+class_name States
+enum StatesEnum{
+	MOVE,
+	IDLE,
+	MOVEFORWARD,
+	MOVEBACK,
+	MOVELEFT,
+	MOVERIGHT,
+	IDLEFORWARD,
+	IDLEBACK,
+	IDLELEFT,
+	IDLERIGHT
+}
