@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=4 uid="uid://c421xxwm1g5va"]
+
+[ext_resource type="Texture2D" uid="uid://bb3hkbk303d0l" path="res://Assests/Art2/walitu/ReceptionRoom/lantern.png" id="1_67mxj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qq1g"]
+resource_name = "材质.017"
+transparency = 4
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+albedo_texture = ExtResource("1_67mxj")
+roughness = 0.5
+texture_filter = 4
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_wa4a6"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "材质.017",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c7uqk"]
+resource_name = "plane_mesh_x24_平面_005"
+lightmap_size_hint = Vector2i(22, 22)
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1, 1e-05, 1),
+"attribute_data": PackedByteArray("AAAAAAAAgD+MLno/jC56PwAAgD8AAAAAjC66PIwuujwAAIA/AACAP4wuej+MLro8AAAAAAAAAACMLro8jC56Pw=="),
+"format": 34359742519,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_7qq1g"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAvwAAAAAAAAA/AAAAPwAAAAAAAAC/AAAAPwAAAAAAAAA/AAAAvwAAAAAAAAC//3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_wa4a6")
+
+[node name="Lantern" type="Node3D"]
+
+[node name="MeshLantern" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_c7uqk")
+skeleton = NodePath("")

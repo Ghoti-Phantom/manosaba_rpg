@@ -70,6 +70,7 @@ transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 
 
 [node name="MeshSakura" type="MeshInstance3D" parent="Sakura"]
 layers = 2
+cast_shadow = 2
 mesh = SubResource("ArrayMesh_nt1nj")
 skeleton = NodePath("")
 

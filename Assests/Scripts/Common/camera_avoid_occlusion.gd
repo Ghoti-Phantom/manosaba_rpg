@@ -16,7 +16,7 @@ func _ready():
 		offset = global_position - offset_node.global_position
 	#desired_position = global_transform.origin + offset
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if not target:
 		return
 	desired_position = global_transform.origin + offset

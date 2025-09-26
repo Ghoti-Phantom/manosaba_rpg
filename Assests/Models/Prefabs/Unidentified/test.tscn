@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=4 uid="uid://7vl4te7k1ld8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2fos"]
+resource_name = "材质.001"
+transparency = 4
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1d147"]
+_surfaces = [{
+"aabb": AABB(-3, 0, -1, 6, 1.375, 2),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAAADAAEACAACAAEAAwAIAAEACQAAAAIAAwAAAAkACAAKAAIACQACAAoAAwALAAgAAwAJAAsACwAMAAgADAAKAAgACwAJAA0ADQAJAAoACwAOAAwACwANAA4ADAAPAAoADQAKAA8ABAAPAAwADgAEAAwABQANAA8ADgANAAUABAAGAA8ABQAPAAYADgAHAAQADgAFAAcABwAGAAQABwAFAAYA"),
+"lods": [0.00065564597, PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA")],
+"name": "材质.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAFVV//8AAAAAVVUAAP//AABVVf////8AAFVVAAAAAAAAqqr//wAAAACqqgAA//8AAKqqAAAAAAAAqqr/////AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7aps6"]
+resource_name = "test_立方体_006"
+_surfaces = [{
+"aabb": AABB(-3, 0, -1, 6, 1.375, 2),
+"attribute_data": PackedByteArray("////v+7uqar//6mq7u7/v////7/u7qmq//+pqu7u/7+7u6mq7u7/f+7uqaq7u/9/5tDy5rfjRNe34/Lm5tBE1+7u/7+7u6mq7u6pqru7/7/u7v+/u7upqu7uqaq7u/+/zMz/v8zMqard3f+/3d2pqszM/7/MzKmq3d3/v93dqapx3fLmcd1E1yvX8uYr10TX3d2pqt3d/3/MzKmqzMz/fw=="),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAGAAVABkAGAAXABUAGgAYABkAGgAZABsAFAAaABsAFAAbABYABAAFAAYABAAHAAUAHAARAB0AHAATABEAHgAcAB0AHgAdAB8AEAAeAB8AEAAfABIAIAANAA4AIAAhAA0AIgAhACAAIgAjACEADAAjACIADAAPACMAJAAJAAoAJAAlAAkAJgAlACQAJgAnACUACAAnACYACAALACcA"),
+"lods": [0.00065564597, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA")],
+"material": SubResource("StandardMaterial3D_e2fos"),
+"name": "材质.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("AAAAAP///78AAP//AAD/vwAA//////+/AAAAAAAA/7///wAAAAD/v/////////+//////wAA/7///wAA////v/////8AAP//AAD///////8AAP//AAD/////////////AAAAAAAA/7///wAA////v///AAAAAP+/AAAAAP///7///wAA//8AgAAA/////wCA////////AIAAAAAA//8AgAAAAAAAAP///////wAA//8AAP//AAD/////AAAAAP//qqoAAAAA//+qqv//AAD//1VVAAAAAP//VVX//wAA//9VVQAA//8AgFVV/////wCAqqoAAP//AICqqv////8AgKqqAAAAAP+/qqoAAP///79VVQAAAAD/v1VVAAD///+/VVX//wAA//9VVf///////6qq//8AAP//qqr/////////f////3////9/////f////38AAP9/AAD/fwAA/38AAP9//7//f/+//3//v/9//78AAP9/AAD/fwAA/38AAP9//3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3///wAA/38AAP9/AAD/fwAA/3//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1d147")
+
+[node name="test" type="Node3D"]
+
+[node name="Desk" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_7aps6")
+skeleton = NodePath("")

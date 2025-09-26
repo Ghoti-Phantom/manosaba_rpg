@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=4 uid="uid://cxv2cdowab5jy"]
+
+[ext_resource type="Texture2D" uid="uid://dho445m6183dr" path="res://Assests/Art2/walitu/ReceptionRoom/picture_frame_3.png" id="1_hdkbm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3i0xl"]
+resource_name = "材质.016"
+transparency = 4
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+albedo_texture = ExtResource("1_hdkbm")
+roughness = 0.5
+texture_filter = 4
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_eva8u"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "材质.016",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kudgm"]
+resource_name = "plane_mesh_x48_平面_004"
+lightmap_size_hint = Vector2i(42, 42)
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("AAAAAAAAgD/P83w/z/N8PwAAgD8AAAAAMQxDPDEMQzwAAIA/AACAP8/zfD8xDEM8AAAAAAAAAAAxDEM8z/N8Pw=="),
+"format": 34359742519,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_3i0xl"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAIA/AACAPwAAAAAAAIC/AACAPwAAAAAAAIA/AACAvwAAAAAAAIC//3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_eva8u")
+
+[node name="PictureFrame3" type="Node3D"]
+
+[node name="MeshPictureFrame3" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_kudgm")
+skeleton = NodePath("")

@@ -47,6 +47,9 @@ import/enabled=true
 animation_library={
 &"gltf/embedded_image_handling": 0
 }
+texture={
+&"detect_3d/compress_to": 0
+}
 
 [input]
 

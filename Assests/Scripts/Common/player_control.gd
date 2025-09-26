@@ -7,6 +7,7 @@ extends CharacterBody3D
 var move_dir: Vector3
 var animation_behaviour_script: EmmaAnimationBehaviour
 var idle_velocity: Vector3
+var move_velocity: Vector3
 
 func _ready() -> void:
 	if !animation_behaviour_script_init:
@@ -43,10 +44,11 @@ func _process(delta: float) -> void:
 		velocity.y -= 9.8 * delta
 	else:
 		velocity.y = 0
-	move_and_slide()
-	if velocity.length_squared() > 0.1:
+	move_velocity = velocity
+	if velocity.length_squared() > 0.0004:
 		idle_velocity = velocity
+		move_and_slide()
 	if velocity.length_squared() > 0.1:
-		animation_behaviour_script.walk(velocity)
+		animation_behaviour_script.walk(move_velocity)
 	else:
 		animation_behaviour_script.idle(idle_velocity)
