@@ -1,0 +1,89 @@
+[gd_scene load_steps=9 format=3 uid="uid://st1cd51piomc"]
+
+[ext_resource type="Texture2D" uid="uid://bk0xny0yyot85" path="res://Assets/Art1/CharactorSprites/ann_walking_picture.png" id="1_pfcnb"]
+[ext_resource type="AnimationLibrary" uid="uid://d36gawt80oo5d" path="res://Assets/Animations/AnimationLibraries/ann.tres" id="2_l240l"]
+[ext_resource type="AnimationNodeStateMachine" uid="uid://cqrwcs26as4yp" path="res://Assets/Animations/AnimationTreeRoots/ann.tres" id="2_swsjx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l240l"]
+resource_name = "材质"
+transparency = 4
+albedo_texture = ExtResource("1_pfcnb")
+roughness = 0.5
+backlight = Color(1, 1, 1, 1)
+uv1_offset = Vector3(0.25, 0, 0)
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4v545"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "材质",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_swsjx"]
+resource_name = "emma_平面"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray(0, 0, 255, 63, 255, 63, 0, 0, 255, 63, 255, 63, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_l240l"),
+"name": "材质",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4v545")
+
+[sub_resource type="Animation" id="Animation_swsjx"]
+resource_name = "RESET"
+step = 0.016666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshAnn:mesh:surface_0/material:uv1_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.25, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bb8ik"]
+_data = {
+&"RESET": SubResource("Animation_swsjx")
+}
+
+[node name="Ann" type="Node3D"]
+
+[node name="MeshAnn" type="MeshInstance3D" parent="."]
+layers = 262144
+cast_shadow = 2
+gi_mode = 2
+mesh = SubResource("ArrayMesh_swsjx")
+skeleton = NodePath("")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = ExtResource("2_swsjx")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Idle/blend_position = Vector2(-0.03292179, -0.632287)
+parameters/Move/blend_position = Vector2(0.018518567, -0.5156951)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_bb8ik"),
+&"ann": ExtResource("2_l240l")
+}

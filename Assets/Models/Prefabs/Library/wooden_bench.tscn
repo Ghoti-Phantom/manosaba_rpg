@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=4 uid="uid://b2v01f0k8f0po"]
+
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assets/Art2/walitu/Library/tiled_assest.tres" id="2_leob8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oqq81"]
+resource_name = "材质.005"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_leob8")
+roughness = 0.5
+backlight = Color(1, 1, 1, 1)
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3xm0e"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "材质.005",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rf4nr"]
+resource_name = "woodenbench_平面_002"
+lightmap_size_hint = Vector2i(42, 42)
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("5tJlP8U8RT7P83w/z/N8PwAAgD8AAAAAMQxDPDEMQzwAAIA/xTxFPs/zfD8xDEM85tJlPwAAAAAxDEM8z/N8Pw=="),
+"format": 34359742519,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_oqq81"),
+"name": "woodenbench",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAIA/AACAPwAAAAAAAIC/AACAPwAAAAAAAIA/AACAvwAAAAAAAIC//3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3xm0e")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oqq81"]
+size = Vector3(1, 0.05091858, 1.2645264)
+
+[node name="Woodenbench" type="Node3D"]
+
+[node name="MeshWoodenbBench" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_rf4nr")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.030189514, 0.13226318)
+shape = SubResource("BoxShape3D_oqq81")

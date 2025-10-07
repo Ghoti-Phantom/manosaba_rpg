@@ -1,0 +1,2 @@
+extends CharactorAnimationBehaviour
+class_name EmmaAnimationBehaviour

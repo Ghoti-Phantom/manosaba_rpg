@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=4 uid="uid://bd0aik3hs31n3"]
+
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assets/Art2/walitu/Library/tiled_assest.tres" id="2_8amw4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8rkk"]
+resource_name = "材质.003"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_8amw4")
+roughness = 0.5
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fciy8"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "材质.003",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jqe8x"]
+resource_name = "paper_平面"
+lightmap_size_hint = Vector2i(42, 42)
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray("zTbNPs2WTD/P83w/z/N8P/94/z6aOho/MQxDPDEMQzz/eP8+zZZMP8/zfD8xDEM8zTbNPpo6Gj8xDEM8z/N8Pw=="),
+"format": 34359742519,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_r8rkk"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AACAvwAAAAAAAIA/AACAPwAAAAAAAIC/AACAPwAAAAAAAIA/AACAvwAAAAAAAIC//3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_fciy8")
+
+[node name="Paper" type="Node3D"]
+
+[node name="MeshPaper" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_jqe8x")
+skeleton = NodePath("")

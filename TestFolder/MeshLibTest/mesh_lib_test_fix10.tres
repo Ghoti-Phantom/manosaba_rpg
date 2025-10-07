@@ -1,8 +1,8 @@
 [gd_resource type="MeshLibrary" load_steps=28 format=4 uid="uid://b67rn6lp0otgn"]
 
-[ext_resource type="Texture2D" uid="uid://v6ivnkht8r7w" path="res://Assests/Art2/walitu/Library/walitu1.png" id="1_5brb1"]
-[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assests/Art2/walitu/Library/tiled_assest.tres" id="2_1upyt"]
-[ext_resource type="Texture2D" uid="uid://k7at2ijskxbl" path="res://Assests/Art2/walitu/Library/library_window.png" id="3_lg1tp"]
+[ext_resource type="Texture2D" uid="uid://v6ivnkht8r7w" path="res://Assets/Art2/walitu/Library/walitu1.png" id="1_5brb1"]
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assets/Art2/walitu/Library/tiled_assest.tres" id="2_1upyt"]
+[ext_resource type="Texture2D" uid="uid://k7at2ijskxbl" path="res://Assets/Art2/walitu/Library/library_window.png" id="3_lg1tp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10572"]
 resource_name = "材质"

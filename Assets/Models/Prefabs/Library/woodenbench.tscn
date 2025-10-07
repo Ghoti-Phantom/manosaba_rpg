@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=4 uid="uid://btatg3n0nfmqd"]
+
+[ext_resource type="Texture2D" uid="uid://b48j2x3fn073d" path="res://Assets/Art2/walitu/Library/tiled_assest.tres" id="1_agf2n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8jmxg"]
+resource_name = "材质.005"
+transparency = 4
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+albedo_texture = ExtResource("1_agf2n")
+roughness = 0.5
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_41y6e"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1.375, 2, 1e-05, 2.75),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "材质.005",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAP//AAD//wAAAAAAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_agf2n"]
+resource_name = "woodenbench_平面_002"
+lightmap_size_hint = Vector2i(58, 42)
+_surfaces = [{
+"aabb": AABB(-1, 0, -1.375, 2, 1e-05, 2.75),
+"attribute_data": PackedByteArray("5tJlP8U8RT4Jy30/z/N8PwAAgD8AAAAAyz0NPDEMQzwAAIA/xTxFPgnLfT8xDEM85tJlPwAAAADLPQ08z/N8Pw=="),
+"format": 34359742519,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": SubResource("StandardMaterial3D_8jmxg"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AACAvwAAAAAAALA/AACAPwAAAAAAALC/AACAPwAAAAAAALA/AACAvwAAAAAAALC//3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//78=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_41y6e")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e8th8"]
+size = Vector3(1.2414131, 0.16149902, 1.7284927)
+
+[node name="WoodenBench" type="Node3D"]
+
+[node name="MeshWoodenbench" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_agf2n")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshWoodenbench"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshWoodenbench/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10097313, 0, 0.0741539)
+shape = SubResource("BoxShape3D_e8th8")

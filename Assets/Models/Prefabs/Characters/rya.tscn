@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://ptqwsx3d70fk"]
+
+[ext_resource type="Texture2D" uid="uid://cc5m2mfxbi6m0" path="res://Assets/Art1/CharactorSprites/rya_walking_picture.png" id="1_hbftk"]
+[ext_resource type="AnimationNodeStateMachine" uid="uid://tlpmn5gk5x5u" path="res://Assets/Animations/AnimationTreeRoots/rya.tres" id="2_ua4rq"]
+[ext_resource type="AnimationLibrary" uid="uid://clr4qy500t5wy" path="res://Assets/Animations/AnimationLibraries/rya.tres" id="3_vkekd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_so3oy"]
+resource_name = "材质"
+transparency = 4
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+albedo_texture = ExtResource("1_hbftk")
+roughness = 0.5
+backlight = Color(1, 1, 1, 1)
+uv1_offset = Vector3(0.25, 0, 0)
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c6gfk"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "材质",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ab86h"]
+resource_name = "emma_平面"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray(0, 0, 255, 63, 255, 63, 0, 0, 255, 63, 255, 63, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_so3oy"),
+"name": "材质",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_c6gfk")
+
+[node name="Lya" type="Node3D"]
+
+[node name="MeshLya" type="MeshInstance3D" parent="."]
+layers = 262144
+cast_shadow = 2
+gi_mode = 2
+mesh = SubResource("ArrayMesh_ab86h")
+skeleton = NodePath("")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = ExtResource("2_ua4rq")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Idle/blend_position = Vector2(-0.014403284, -0.5067265)
+parameters/Move/blend_position = Vector2(-0.04115224, -0.1748879)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"rya": ExtResource("3_vkekd")
+}

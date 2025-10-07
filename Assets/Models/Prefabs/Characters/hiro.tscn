@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://dk7p1aj0516le"]
+
+[ext_resource type="Texture2D" uid="uid://m5x007h5c56q" path="res://Assets/Art1/CharactorSprites/hiro_walking_picture.png" id="1_6mccs"]
+[ext_resource type="AnimationNodeStateMachine" uid="uid://bpxu2xky8yii1" path="res://Assets/Animations/AnimationTreeRoots/hiro.tres" id="2_ic5xt"]
+[ext_resource type="AnimationLibrary" uid="uid://b03td8a25wyxs" path="res://Assets/Animations/AnimationLibraries/hiro.tres" id="3_ic5xt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_so3oy"]
+resource_name = "材质"
+transparency = 4
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+albedo_texture = ExtResource("1_6mccs")
+roughness = 0.5
+backlight = Color(1, 1, 1, 1)
+uv1_offset = Vector3(0.25, 0.75, 0)
+texture_filter = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_c6gfk"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "材质",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ab86h"]
+resource_name = "emma_平面"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2),
+"attribute_data": PackedByteArray(0, 0, 255, 63, 255, 63, 0, 0, 255, 63, 255, 63, 0, 0, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_so3oy"),
+"name": "材质",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_c6gfk")
+
+[node name="Hiro" type="Node3D"]
+
+[node name="MeshHiro" type="MeshInstance3D" parent="."]
+layers = 262144
+cast_shadow = 2
+gi_mode = 2
+mesh = SubResource("ArrayMesh_ab86h")
+skeleton = NodePath("")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = ExtResource("2_ic5xt")
+advance_expression_base_node = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Idle/blend_position = Vector2(-0.01028806, 0.95604396)
+parameters/Move/blend_position = Vector2(0.2386831, 0.5156951)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"hiro": ExtResource("3_ic5xt")
+}

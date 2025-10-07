@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=4 uid="uid://gybm26xgvef0"]
 
 [ext_resource type="Texture2D" uid="uid://b8tlaanw8wsum" path="res://TestFolder/SkyBoxes/wasteland_clouds_puresky_4k.exr" id="1_gdyil"]
-[ext_resource type="Texture2D" uid="uid://k7at2ijskxbl" path="res://Assests/Art2/walitu/Library/library_window.png" id="2_ms8jb"]
+[ext_resource type="Texture2D" uid="uid://k7at2ijskxbl" path="res://Assets/Art2/walitu/Library/library_window.png" id="2_ms8jb"]
 [ext_resource type="Shader" uid="uid://bn6hh0d30djpp" path="res://TestFolder/ShaderTest/test_scene.gdshader" id="3_gdyil"]
 [ext_resource type="MeshLibrary" uid="uid://lhm88gl2w2bd" path="res://TestFolder/MeshLibTest/mesh_lib_test_fix7.tres" id="5_2ryv8"]
 

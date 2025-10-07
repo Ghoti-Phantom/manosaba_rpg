@@ -17,15 +17,18 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/quality/screen_space_aa=0
 window/quality/msaa_3d=0
 
 [dotnet]
 
 project/assembly_name="manosaba_rpg_repo"
+
+[editor]
+
+movie_writer/movie_file="D:/Game Projects/Godot Projects/manosaba_rpg/movie.avi"
+movie_writer/disable_vsync=true
 
 [editor_plugins]
 
@@ -34,7 +37,7 @@ enabled=PackedStringArray("res://addons/YATI/plugin.cfg")
 [file_customization]
 
 folder_colors={
-"res://Assests/": "red",
+"res://Assets/": "red",
 "res://TestFolder/": "green"
 }
 

@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://coblap4u6w40d"]
-
-[ext_resource type="PackedScene" uid="uid://duk6de1yxplt2" path="res://Assests/Models/Prefabs/Library/bookshelf.tscn" id="1_oh5cv"]
-
-[node name="Mlib4" type="Node3D"]
-
-[node name="BookShelf" parent="." instance=ExtResource("1_oh5cv")]
