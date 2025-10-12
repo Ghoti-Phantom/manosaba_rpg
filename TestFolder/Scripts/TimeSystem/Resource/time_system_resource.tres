@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cvwn0lwjwgidg"]
+
+[ext_resource type="Script" uid="uid://cfi7basqac38y" path="res://TestFolder/Scripts/TimeSystem/Resource/time_system_resource_script.gd" id="1_jh6ig"]
+
+[resource]
+script = ExtResource("1_jh6ig")
+end_time = 5.0
+time_point = Array[float]([10.0, 25.0, 50.0])

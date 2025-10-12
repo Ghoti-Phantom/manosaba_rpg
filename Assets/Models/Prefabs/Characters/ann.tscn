@@ -79,8 +79,8 @@ skeleton = NodePath("")
 tree_root = ExtResource("2_swsjx")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Idle/blend_position = Vector2(-0.03292179, -0.632287)
-parameters/Move/blend_position = Vector2(0.018518567, -0.5156951)
+parameters/Idle/blend_position = Vector2(-0.08641976, 0.22869956)
+parameters/Move/blend_position = Vector2(0.04320991, -0.5605382)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -79,7 +79,7 @@ skeleton = NodePath("")
 tree_root = ExtResource("2_ai6bt")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Idle/blend_position = Vector2(0.078189254, -0.21076238)
+parameters/Idle/blend_position = Vector2(0.1790123, -0.3452915)
 parameters/Move/blend_position = Vector2(-0.35185188, 0.022421598)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

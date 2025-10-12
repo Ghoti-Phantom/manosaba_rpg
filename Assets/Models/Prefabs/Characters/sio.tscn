@@ -11,6 +11,7 @@ albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
 albedo_texture = ExtResource("1_d1fbk")
 roughness = 0.5
 backlight = Color(1, 1, 1, 1)
+uv1_offset = Vector3(0.75, 0, 0)
 texture_filter = 0
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ai6bt"]
@@ -59,7 +60,7 @@ tree_root = ExtResource("2_d1fbk")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(0, 0.67713)
-parameters/Move/blend_position = Vector2(-0.018518507, -0.4798206)
+parameters/Move/blend_position = Vector2(-0.026748955, -0.77578473)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

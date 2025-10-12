@@ -59,7 +59,7 @@ tree_root = ExtResource("2_qggrg")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(-0.01028806, -0.46188343)
-parameters/Move/blend_position = Vector2(-0.03292179, -0.58744395)
+parameters/Move/blend_position = Vector2(0.0020576715, -0.838565)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

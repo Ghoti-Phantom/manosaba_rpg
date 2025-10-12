@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="manosaba_rpg"
+config/name="manosaba_rpg_tg"
 run/main_scene="uid://c4clqqbcth8pe"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
@@ -44,6 +44,12 @@ folder_colors={
 [filesystem]
 
 import/enabled=true
+
+[global_group]
+
+1=""
+2=""
+3=""
 
 [importer_defaults]
 
